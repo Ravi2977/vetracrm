@@ -1,0 +1,147 @@
+const menuButton = document.querySelector('.menu-toggle');
+const menu = document.querySelector('#nav-menu');
+
+menuButton?.addEventListener('click', () => {
+  const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+  menuButton.setAttribute('aria-expanded', String(!isOpen));
+  menuButton.setAttribute('aria-label', isOpen ? 'Open navigation' : 'Close navigation');
+  menu?.classList.toggle('open', !isOpen);
+});
+
+menu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+  menu.classList.remove('open');
+  menuButton?.setAttribute('aria-expanded', 'false');
+  menuButton?.setAttribute('aria-label', 'Open navigation');
+}));
+
+const year = document.querySelector('#year');
+if (year) year.textContent = new Date().getFullYear();
+
+// Deployed Google Apps Script Web App endpoint.
+const GOOGLE_SHEETS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbyvoKnzxBZX57sl4nRGlbBv4NuigQNfS2mWWL-xtb0thJJzdWSkGPWxrVmPXLKgF9fj/exec';
+const offerDialog = document.createElement('dialog');
+offerDialog.className = 'diwali-offer-dialog';
+offerDialog.setAttribute('aria-labelledby', 'diwali-offer-title');
+offerDialog.innerHTML = `
+  <button class="offer-close" type="button" aria-label="Close offer form">×</button>
+  <div class="offer-kicker"><span aria-hidden="true">✦</span> DIWALI SPECIAL <b>20% OFF</b></div>
+  <h2 id="diwali-offer-title">Get your Vetra CRM offer</h2>
+  <p class="offer-intro">Get 20% off the Vetra CRM monthly subscription and one-time setup. Share your details and our team will confirm offer validity and the discounted quote.</p>
+  <form class="contact-form offer-form" name="offer-enquiry" method="POST">
+    <p class="hidden-field"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+    <div class="form-grid">
+      <label>Full name <em>*</em><input required name="name" autocomplete="name" placeholder="Your name"></label>
+      <label>Business name <em>*</em><input required name="business" autocomplete="organization" placeholder="Your business"></label>
+      <label>Work email <em>*</em><input required type="email" name="email" autocomplete="email" placeholder="you@company.com"></label>
+      <label>Mobile number <span class="optional">Optional</span><input type="tel" name="phone" autocomplete="tel" placeholder="+91 98765 43210"></label>
+      <label>Business type <em>*</em><select required name="business_type"><option value="" disabled selected>Select your business type</option><option>IndiaMART seller</option><option>Manufacturer or supplier</option><option>Wholesaler or distributor</option><option>B2B trading or export</option><option>Professional or service business</option><option>Consulting or agency</option><option>E-commerce</option><option>Retail or trading</option><option>Other</option></select></label>
+      <label>Interested in <select name="interest"><option selected>Diwali offer (20% off subscription + setup)</option><option>Monthly CRM subscription</option><option>One-time setup and onboarding</option><option>Both</option><option>Not sure yet</option></select></label>
+      <label class="form-full">What would you like help with? <span class="optional">Optional</span><textarea name="message" rows="2" placeholder="Tell us what your team needs…"></textarea></label>
+    </div>
+    <div class="form-bottom"><p>By submitting, you agree we may contact you about Vetra CRM. See our <a href="/privacy.html">privacy notice</a>.</p><button class="btn btn-primary" type="submit">Get 20% offer <span>↗</span></button></div>
+    <p class="form-status" role="status" aria-live="polite"></p>
+  </form>
+`;
+document.body.append(offerDialog);
+
+const contactForms = [...document.querySelectorAll('.contact-form')];
+const claimOfferFromUrl = new URLSearchParams(window.location.search).get('offer') === 'diwali20';
+
+contactForms.forEach((contactForm) => {
+  const contactStatus = contactForm.querySelector('.form-status');
+  const interestSelect = contactForm.querySelector('[name="interest"]');
+  if (claimOfferFromUrl && interestSelect) interestSelect.value = 'Diwali offer (20% off subscription + setup)';
+
+  contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!contactForm.reportValidity()) return;
+
+    const endpointIsConfigured = /^https:\/\/script\.google\.com\/macros\/s\/[^/]+\/exec$/.test(GOOGLE_SHEETS_WEB_APP_URL);
+    if (!endpointIsConfigured) {
+      contactStatus.textContent = 'The enquiry form is not connected yet. Please try again later.';
+      contactStatus.classList.add('is-error');
+      return;
+    }
+
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const submitLabel = submitButton.innerHTML;
+    const formData = new FormData(contactForm);
+    const pageUrl = ['localhost', '127.0.0.1'].includes(window.location.hostname)
+      ? 'https://vetracrm.in/'
+      : `${window.location.origin}${window.location.pathname}`;
+    const payload = {
+      'Full name': formData.get('name') || '',
+      'Business name': formData.get('business') || '',
+      'Work email': formData.get('email') || '',
+      'Mobile number': formData.get('phone') || '',
+      'Business type': formData.get('business_type') || '',
+      'Interested in': formData.get('interest') || '',
+      'Message': formData.get('message') || '',
+      'Page URL': pageUrl,
+    };
+    if (formData.get('website')) payload.website = formData.get('website');
+
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending…';
+    contactStatus.textContent = 'Sending your enquiry…';
+    contactStatus.classList.remove('is-error', 'is-success');
+
+    try {
+      const response = await fetch(GOOGLE_SHEETS_WEB_APP_URL, {
+        method: 'POST',
+        mode: 'cors',
+        redirect: 'follow',
+        credentials: 'omit',
+        headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
+        body: JSON.stringify(payload),
+      });
+      const responseText = await response.text();
+      let result = {};
+      try {
+        result = responseText ? JSON.parse(responseText) : {};
+      } catch {
+        result = { message: responseText.trim() };
+      }
+
+      const statusValue = String(result.status || '').toLowerCase();
+      const explicitFailure = result.ok === false
+        || result.success === false
+        || ['error', 'failed', 'failure'].includes(statusValue)
+        || Boolean(result.error);
+      if (!response.ok || explicitFailure) {
+        throw new Error(result.error || result.message || 'Apps Script received the request but returned a failure flag. Check the deployed field names and required-field validation.');
+      }
+
+      const successValue = result.ok === true
+        || result.success === true
+        || ['ok', 'success', 'saved', 'submitted'].includes(statusValue)
+        || /\b(success|saved|submitted)\b/i.test(String(result.message || ''));
+      if (!successValue) {
+        throw new Error(`Apps Script replied with HTTP ${response.status}, but did not confirm saving. Check the Sheet and Apps Script response format.`);
+      }
+
+      contactForm.reset();
+      contactStatus.textContent = 'Thank you. Your enquiry has been saved.';
+      contactStatus.classList.add('is-success');
+    } catch (error) {
+      contactStatus.textContent = error instanceof TypeError
+        ? 'Google did not return a readable response. Check that the deployed web app is public and that its latest version is deployed.'
+        : (error.message || 'We could not save your enquiry. Please try again.');
+      contactStatus.classList.add('is-error');
+    } finally {
+      submitButton.disabled = false;
+      submitButton.innerHTML = submitLabel;
+    }
+  });
+});
+
+offerDialog.querySelector('.offer-close').addEventListener('click', () => offerDialog.close('dismiss'));
+offerDialog.addEventListener('click', (event) => {
+  if (event.target === offerDialog) offerDialog.close('dismiss');
+});
+
+// Show the offer form on every page load; no delay or prior-visit/session gate.
+offerDialog.showModal();
+window.addEventListener('pageshow', (event) => {
+  if (event.persisted && !offerDialog.open) offerDialog.showModal();
+});
