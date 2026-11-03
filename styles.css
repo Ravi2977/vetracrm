@@ -344,3 +344,17 @@ h1,h2,h3{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'S
 @media(max-width:1000px){.blog-listing-grid{grid-template-columns:minmax(0,1fr) 290px;gap:14px}.article-layout{grid-template-columns:280px minmax(0,1fr);gap:20px}.article-body{padding:30px 28px}}
 @media(max-width:760px){.blog-listing-grid{grid-template-columns:1fr}.blog-form-aside{position:static;order:2}.blog-listing-grid>.blog-card-grid{order:1}.article-layout{grid-template-columns:1fr;gap:16px}.article-layout>.article-body{grid-column:1;grid-row:1}.article-layout>.blog-form-aside{grid-column:1;grid-row:2;position:static}.article-body{padding:23px 19px}.diwali-offer-dialog{padding:32px 19px 20px}.offer-form{padding:15px 13px}.offer-form .form-grid{grid-template-columns:1fr;gap:9px}.offer-form .form-full{grid-column:auto}.offer-form .form-bottom{align-items:stretch;flex-direction:column}.offer-form .form-bottom p{max-width:none}.offer-form .form-bottom .btn{width:100%;justify-content:space-between}}
 @media(prefers-reduced-motion:reduce){.diwali-offer-dialog[open],.diwali-offer-dialog[open]::backdrop{animation:none}}
+
+/* Social profile links */
+.social-links { display: flex; align-items: center; gap: 8px; }
+.social-links a, .social-placeholder { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid #dfe7ee; border-radius: 50%; background: #fff; color: #536780; }
+.social-links a { transition: color .18s ease, border-color .18s ease, background .18s ease, transform .18s ease; }
+.social-links a:hover { transform: translateY(-2px); border-color: #b8d3e3; background: #f0f7fb; color: #176e9d; }
+.social-links svg { width: 16px; height: 16px; fill: currentColor; }
+.social-placeholder { color: #a5afbb; cursor: default; }
+.footer-bottom .social-links { margin: -7px 0; }
+@media(max-width:760px) {
+  .footer-bottom { flex-wrap: wrap; align-items: center; }
+  .footer-bottom .social-links { order: 3; width: 100%; justify-content: center; margin: 3px 0 0; }
+  .social-links a, .social-placeholder { width: 36px; height: 36px; }
+}
