@@ -20,7 +20,7 @@ The website enquiry Sheet ID is already set in `Code.gs`, and the script targets
 
 ## 4. Connect the website
 
-The current deployed `/exec` URL is configured in `script.js`. The form sends a JSON body using these exact keys (as `text/plain` to avoid a browser CORS preflight); Apps Script parses `e.postData.contents` as JSON. It sends `Full name`, `Business name`, `Work email`, `Mobile number`, `Business type`, `Interested in`, `Message`, and `Page URL`; Apps Script fills `Submitted at` automatically. Submit a test enquiry and check the `Website Leads` tab. The form now reads the Apps Script JSON response and only shows success when the script reports that the row was saved.
+The website now submits each enquiry to the Vetra CRM leads webhook first. After the CRM accepts it, the form also attempts a best-effort copy to the deployed `/exec` URL configured in `script.js`. The Sheet backup uses these keys (as `text/plain` to avoid a browser CORS preflight): `Full name`, `Business name`, `Work email`, `Mobile number`, `Business type`, `Interested in`, `Message`, and `Page URL`; Apps Script fills `Submitted at` automatically. City and state are sent to Vetra CRM, but are not included in the existing Sheet columns. The page reports success when Vetra CRM accepts the lead; a Sheet backup failure does not undo the CRM submission.
 
 Open the `/exec` URL in a browser to run the `doGet` health check. A working deployment returns JSON with `"ok": true`; `"sheetExists": false` means run `setupSheet` once. If you change `Code.gs`, copy the updated file into the Apps Script editor and deploy a new version from **Deploy → Manage deployments → Edit → Version: New version → Deploy**.
 

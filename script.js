@@ -19,6 +19,13 @@ if (year) year.textContent = new Date().getFullYear();
 
 // Deployed Google Apps Script Web App endpoint.
 const GOOGLE_SHEETS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbyvoKnzxBZX57sl4nRGlbBv4NuigQNfS2mWWL-xtb0thJJzdWSkGPWxrVmPXLKgF9fj/exec';
+// Public Vetra CRM webhook URL for website enquiries.
+const VETRA_CRM_LEADS_API_URL = 'https://api.vetracrm.in/api/v1/webhooks/leads/custom/5e45385cd6f94968be4c08920235ba50cb6069c816e448f8a9e677aa8f2b449f';
+
+function createSourceLeadId() {
+  const uniquePart = globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(36).slice(2, 12)}`;
+  return `vetracrm-website-${uniquePart}`;
+}
 const offerDialog = document.createElement('dialog');
 offerDialog.className = 'diwali-offer-dialog';
 offerDialog.setAttribute('aria-labelledby', 'diwali-offer-title');
@@ -34,6 +41,8 @@ offerDialog.innerHTML = `
       <label>Business name <em>*</em><input required name="business" autocomplete="organization" placeholder="Your business"></label>
       <label>Work email <em>*</em><input required type="email" name="email" autocomplete="email" placeholder="you@company.com"></label>
       <label>Mobile number <span class="optional">Optional</span><input type="tel" name="phone" autocomplete="tel" placeholder="+91 98765 43210"></label>
+      <label>City <span class="optional">Optional</span><input name="city" autocomplete="address-level2" placeholder="Your city"></label>
+      <label>State / region <span class="optional">Optional</span><input name="state" autocomplete="address-level1" placeholder="Your state"></label>
       <label>Business type <em>*</em><select required name="business_type"><option value="" disabled selected>Select your business type</option><option>IndiaMART seller</option><option>Manufacturer or supplier</option><option>Wholesaler or distributor</option><option>B2B trading or export</option><option>Professional or service business</option><option>Consulting or agency</option><option>E-commerce</option><option>Retail or trading</option><option>Other</option></select></label>
       <label>Interested in <select name="interest"><option selected>Diwali offer (20% off subscription + setup)</option><option>Monthly CRM subscription</option><option>One-time setup and onboarding</option><option>Both</option><option>Not sure yet</option></select></label>
       <label class="form-full">What would you like help with? <span class="optional">Optional</span><textarea name="message" rows="2" placeholder="Tell us what your team needs…"></textarea></label>
@@ -56,30 +65,46 @@ contactForms.forEach((contactForm) => {
     event.preventDefault();
     if (!contactForm.reportValidity()) return;
 
-    const endpointIsConfigured = /^https:\/\/script\.google\.com\/macros\/s\/[^/]+\/exec$/.test(GOOGLE_SHEETS_WEB_APP_URL);
-    if (!endpointIsConfigured) {
-      contactStatus.textContent = 'The enquiry form is not connected yet. Please try again later.';
-      contactStatus.classList.add('is-error');
-      return;
-    }
-
     const submitButton = contactForm.querySelector('button[type="submit"]');
     const submitLabel = submitButton.innerHTML;
     const formData = new FormData(contactForm);
+    if (formData.get('website')) {
+      contactForm.reset();
+      return;
+    }
     const pageUrl = ['localhost', '127.0.0.1'].includes(window.location.hostname)
-      ? 'https://vetracrm.in/'
+      ? `https://vetracrm.in${window.location.pathname}`
       : `${window.location.origin}${window.location.pathname}`;
-    const payload = {
+    const businessType = String(formData.get('business_type') || '').trim();
+    const customerMessage = String(formData.get('message') || '').trim();
+    const contextLines = [
+      businessType ? `Business type: ${businessType}` : '',
+      `Website page: ${pageUrl}`,
+    ].filter(Boolean);
+    const sourceLeadId = contactForm.dataset.sourceLeadId || createSourceLeadId();
+    contactForm.dataset.sourceLeadId = sourceLeadId;
+    const crmPayload = {
+      lead_id: sourceLeadId,
+      name: String(formData.get('name') || '').trim(),
+      email: String(formData.get('email') || '').trim(),
+      phone: String(formData.get('phone') || '').trim(),
+      company: String(formData.get('business') || '').trim(),
+      subject: String(formData.get('interest') || '').trim() || 'Vetra CRM enquiry',
+      message: [customerMessage, ...contextLines].filter(Boolean).join('\n\n'),
+      city: String(formData.get('city') || '').trim(),
+      state: String(formData.get('state') || '').trim(),
+    };
+    const sheetsPayload = {
       'Full name': formData.get('name') || '',
       'Business name': formData.get('business') || '',
       'Work email': formData.get('email') || '',
       'Mobile number': formData.get('phone') || '',
-      'Business type': formData.get('business_type') || '',
+      'Business type': businessType,
       'Interested in': formData.get('interest') || '',
-      'Message': formData.get('message') || '',
+      'Message': customerMessage,
       'Page URL': pageUrl,
     };
-    if (formData.get('website')) payload.website = formData.get('website');
+    if (formData.get('website')) sheetsPayload.website = formData.get('website');
 
     submitButton.disabled = true;
     submitButton.textContent = 'Sending…';
@@ -87,13 +112,11 @@ contactForms.forEach((contactForm) => {
     contactStatus.classList.remove('is-error', 'is-success');
 
     try {
-      const response = await fetch(GOOGLE_SHEETS_WEB_APP_URL, {
+      const response = await fetch(VETRA_CRM_LEADS_API_URL, {
         method: 'POST',
-        mode: 'cors',
-        redirect: 'follow',
         credentials: 'omit',
-        headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
-        body: JSON.stringify(payload),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(crmPayload),
       });
       const responseText = await response.text();
       let result = {};
@@ -103,30 +126,37 @@ contactForms.forEach((contactForm) => {
         result = { message: responseText.trim() };
       }
 
-      const statusValue = String(result.status || '').toLowerCase();
+      const responseStatus = String(result.status || '').toLowerCase();
       const explicitFailure = result.ok === false
         || result.success === false
-        || ['error', 'failed', 'failure'].includes(statusValue)
+        || ['error', 'failed', 'failure'].includes(responseStatus)
         || Boolean(result.error);
       if (!response.ok || explicitFailure) {
-        throw new Error(result.error || result.message || 'Apps Script received the request but returned a failure flag. Check the deployed field names and required-field validation.');
+        throw new Error(result.error || result.message || `CRM webhook returned HTTP ${response.status}.`);
       }
 
-      const successValue = result.ok === true
-        || result.success === true
-        || ['ok', 'success', 'saved', 'submitted'].includes(statusValue)
-        || /\b(success|saved|submitted)\b/i.test(String(result.message || ''));
-      if (!successValue) {
-        throw new Error(`Apps Script replied with HTTP ${response.status}, but did not confirm saving. Check the Sheet and Apps Script response format.`);
+      // Keep the existing Sheet as a best-effort backup after the CRM accepts the lead.
+      try {
+        await fetch(GOOGLE_SHEETS_WEB_APP_URL, {
+          method: 'POST',
+          mode: 'cors',
+          redirect: 'follow',
+          credentials: 'omit',
+          headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
+          body: JSON.stringify(sheetsPayload),
+        });
+      } catch (sheetError) {
+        console.warn('CRM accepted the lead, but the Google Sheets backup could not be reached.', sheetError);
       }
 
       contactForm.reset();
-      contactStatus.textContent = 'Thank you. Your enquiry has been saved.';
+      delete contactForm.dataset.sourceLeadId;
+      contactStatus.textContent = 'Thank you. Your enquiry has been sent to the Vetra CRM team.';
       contactStatus.classList.add('is-success');
     } catch (error) {
       contactStatus.textContent = error instanceof TypeError
-        ? 'Google did not return a readable response. Check that the deployed web app is public and that its latest version is deployed.'
-        : (error.message || 'We could not save your enquiry. Please try again.');
+        ? 'We could not reach the Vetra CRM service. Please check your connection and try again.'
+        : (error.message || 'We could not send your enquiry. Please try again.');
       contactStatus.classList.add('is-error');
     } finally {
       submitButton.disabled = false;
