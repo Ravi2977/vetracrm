@@ -280,7 +280,7 @@ h1,h2,h3{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'S
 .blog-card{overflow:hidden;border:1px solid #dbe2ea;border-radius:8px;background:#fff;box-shadow:0 2px 6px #0f172a08;transition:transform .18s ease,box-shadow .18s ease}
 .blog-card:hover{transform:translateY(-3px);box-shadow:0 14px 28px #0f172a12}
 .blog-card-art{height:190px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:20px;background:#eaf2ff}
-.art-leads{background:linear-gradient(135deg,#eaf2ff,#d9edf3)}.art-pipeline{background:linear-gradient(135deg,#edf2ff,#e5eafe)}
+.art-leads{background:linear-gradient(135deg,#eaf2ff,#d9edf3)}.art-pipeline{background:linear-gradient(135deg,#edf2ff,#e5eafe)}.art-followups{background:linear-gradient(135deg,#e7f5f1,#e4edff)}
 .art-kicker{position:absolute;top:17px;left:19px;color:#1d4ed8;font-size:8px;font-weight:800;letter-spacing:1.2px}
 .art-stack{display:grid;gap:8px;width:min(320px,85%);transform:rotate(-2deg)}
 .art-stack i{display:block;padding:11px 13px;border:1px solid #d9e2ec;border-radius:5px;background:#fff;box-shadow:0 5px 12px #0f172a0b;color:#334155;font-size:10px;font-style:normal;font-weight:600}
