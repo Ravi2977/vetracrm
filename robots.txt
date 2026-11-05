@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /google-apps-script/
-
+ 
 Sitemap: https://vetracrm.in/sitemap.xml
