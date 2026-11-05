@@ -170,8 +170,21 @@ offerDialog.addEventListener('click', (event) => {
   if (event.target === offerDialog) offerDialog.close('dismiss');
 });
 
-// Show the offer form on every page load; no delay or prior-visit/session gate.
-offerDialog.showModal();
-window.addEventListener('pageshow', (event) => {
-  if (event.persisted && !offerDialog.open) offerDialog.showModal();
-});
+// Show the offer once when a visitor first lands on the homepage in this tab session.
+const isLandingPage = window.location.pathname === '/' || window.location.pathname === '/index.html';
+const offerSeenKey = 'vetraOfferSeenThisSession';
+let offerSeenThisSession = false;
+try {
+  offerSeenThisSession = sessionStorage.getItem(offerSeenKey) === 'true';
+} catch {
+  // If storage is unavailable, still keep the popup limited to the homepage load.
+}
+
+if (isLandingPage && !offerSeenThisSession) {
+  offerDialog.showModal();
+  try {
+    sessionStorage.setItem(offerSeenKey, 'true');
+  } catch {
+    // The dialog will not be re-opened by page navigation handlers.
+  }
+}
