@@ -4,15 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f9fc">
-  <meta name="description" content="Vetra CRM for Indian businesses: capture IndiaMART, Google and Meta Ads leads, send WhatsApp quotations, track stock and payments, and use an AI assistant.">
+  <meta name="description" content="CRM for Indian businesses: capture IndiaMART, Google and Facebook leads, chat on WhatsApp, send quotes with payment links and use AI. Cloud or self-hosted.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://vetracrm.in/">
   <link rel="alternate" hreflang="en-IN" href="https://vetracrm.in/">
   <link rel="alternate" hreflang="x-default" href="https://vetracrm.in/">
-  <link rel="icon" href="/assets/favicon.png" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Vetra CRM | CRM for IndiaMART Sellers &amp; Indian Businesses">
-  <meta property="og:description" content="Capture IndiaMART, Google Ads and Meta Ads leads, send quotations on WhatsApp, track stock and payments, and reply with an AI assistant.">
+  <meta property="og:description" content="CRM for Indian businesses: capture IndiaMART, Google and Facebook leads, chat on WhatsApp, send quotes with payment links and use AI. Cloud or self-hosted.">
   <meta property="og:url" content="https://vetracrm.in/">
   <meta property="og:site_name" content="Vetra CRM">
   <meta property="og:locale" content="en_IN">
@@ -23,168 +26,13 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Vetra CRM | CRM for IndiaMART Sellers &amp; Indian Businesses">
-  <meta name="twitter:description" content="Capture IndiaMART, Google Ads and Meta Ads leads, send quotations on WhatsApp, track stock and payments, and reply with an AI assistant.">
+  <meta name="twitter:description" content="CRM for Indian businesses: capture IndiaMART, Google and Facebook leads, chat on WhatsApp, send quotes with payment links and use AI. Cloud or self-hosted.">
   <meta name="twitter:image" content="https://vetracrm.in/assets/og-image.png">
   <title>Vetra CRM | CRM for IndiaMART Sellers, WhatsApp &amp; Quotations</title>
   <link rel="stylesheet" href="/styles.css">
   <link rel="preconnect" href="https://www.googletagmanager.com">
 
-  <!-- NEW: styles for the added sections (offer bar, WhatsApp buttons, AI spotlight, comparison, testimonials).
-       Chahe to inhe styles.css me move kar do. -->
-  <style id="additions">
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-    [data-wa][hidden]{display:none!important}
-
-    .offer-bar{background:#1b1026;color:#fff4dc;text-align:center;padding:10px 16px;font-size:14px;line-height:1.5}
-    .offer-bar b{color:#ffd76a}
-    .offer-bar a{color:#ffd76a;font-weight:700;text-decoration:underline;margin-left:8px;white-space:nowrap}
-
-    .offer-chip{display:inline-flex;align-items:center;gap:8px;margin:0 0 16px;padding:7px 14px;border-radius:999px;background:#fff4dc;color:#1b1026;font-size:13px;font-weight:600;border:1px solid #f2d08a}
-
-    .btn-wa{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:999px;background:#167a46;color:#fff;font-weight:600;text-decoration:none;line-height:1.2}
-    .btn-wa:hover{background:#126238;color:#fff}
-    .btn-wa svg{width:18px;height:18px;fill:currentColor;flex:none}
-
-    .wa-float{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;display:inline-flex;align-items:center;gap:8px;padding:13px 18px;border-radius:999px;background:#167a46;color:#fff;font-weight:600;font-size:15px;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.22)}
-    .wa-float:hover{background:#126238;color:#fff}
-    .wa-float svg{width:20px;height:20px;fill:currentColor;flex:none}
-
-    .ai-spotlight{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:center;margin:0 0 28px;padding:36px;border-radius:24px;background:#fff;border:1px solid #e3e8f0;box-shadow:0 10px 30px rgba(20,30,60,.06)}
-    .ai-tag{display:inline-block;margin-bottom:12px;padding:5px 12px;border-radius:999px;background:#1b1026;color:#ffd76a;font-size:12px;font-weight:700;letter-spacing:.12em}
-    .ai-spotlight h3{margin:0 0 12px;font-size:clamp(24px,3vw,32px);line-height:1.2}
-    .ai-spotlight p{margin:0 0 18px;line-height:1.6}
-    .ai-points{list-style:none;margin:0;padding:0;display:grid;gap:12px}
-    .ai-points li{padding:14px 18px;border-radius:14px;background:#f7f9fc;border:1px solid #e3e8f0;display:flex;flex-direction:column;gap:2px}
-    .ai-points li span{font-size:14px;line-height:1.5;opacity:.8}
-    .ai-note{grid-column:1/-1;margin:0!important;font-size:13px;opacity:.7}
-
-    .compare-wrap{overflow-x:auto;margin-top:8px;border-radius:20px;border:1px solid #e3e8f0;background:#fff}
-    .compare-table{width:100%;min-width:640px;border-collapse:collapse;text-align:left}
-    .compare-table th,.compare-table td{padding:16px 20px;vertical-align:top;border-bottom:1px solid #e3e8f0;line-height:1.5;font-size:15px}
-    .compare-table thead th{font-size:13px;letter-spacing:.08em;text-transform:uppercase;background:#f7f9fc}
-    .compare-table tbody th{font-weight:700;width:24%}
-    .compare-table tbody tr:last-child th,.compare-table tbody tr:last-child td{border-bottom:0}
-    .compare-table td:nth-child(2){opacity:.75}
-    .compare-table td:nth-child(3){font-weight:600}
-    .compare-cta{margin-top:24px;text-align:center}
-
-    .testimonials-section[hidden]{display:none!important}
-    .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px}
-    .testi-card{margin:0;padding:28px;border-radius:20px;background:#fff;border:1px solid #e3e8f0;display:flex;flex-direction:column;gap:18px}
-    .testi-card blockquote{margin:0;font-size:17px;line-height:1.6}
-    .testi-card figcaption{display:flex;flex-direction:column;font-size:14px}
-    .testi-card figcaption span{opacity:.7}
-
-    @media (max-width:820px){
-      .ai-spotlight{grid-template-columns:1fr;padding:24px}
-      .testi-grid{grid-template-columns:1fr}
-      .wa-float span{display:none}
-      .wa-float{padding:14px}
-    }
-
-    /* ===== NEW sections: highlight band, journey, SEO guide ===== */
-    .highlight-band{background:linear-gradient(135deg,#1b1026 0%,#3a1b4f 100%);color:#fff4dc;padding:clamp(48px,7vw,88px) 0}
-    .highlight-head{max-width:760px;margin:0 0 36px}
-    .highlight-kicker{display:inline-block;margin-bottom:14px;color:#ffd76a;font-size:13px;font-weight:700;letter-spacing:.14em}
-    .highlight-head h2{margin:0;color:#fff4dc;font-size:clamp(30px,4.2vw,48px);line-height:1.12}
-    .highlight-head h2 em{color:#ffd76a;font-style:italic}
-    .highlight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .highlight-card{padding:28px;border-radius:20px;background:rgba(255,255,255,.07);border:1px solid rgba(255,215,106,.22)}
-    .highlight-icon{display:grid;place-items:center;width:46px;height:46px;margin-bottom:16px;border-radius:14px;background:#ffd76a;color:#1b1026;font-size:22px;font-weight:700}
-    .highlight-card h3{margin:0 0 8px;font-size:20px;line-height:1.25;color:#fff4dc}
-    .highlight-card p{margin:0;line-height:1.6;color:#e9dcf0}
-    .highlight-cta{margin-top:32px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
-    .highlight-band .btn-primary{background:#ffd76a;color:#1b1026}
-    .highlight-band .btn-primary:hover{background:#ffe08f;color:#1b1026}
-
-    .journey-list{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .journey-step{padding:28px;border-radius:20px;background:#fff;border:1px solid #e3e8f0}
-    .journey-num{display:grid;place-items:center;width:40px;height:40px;margin-bottom:14px;border-radius:50%;background:#1b1026;color:#ffd76a;font-weight:700}
-    .journey-step h3{margin:0 0 8px;font-size:19px;line-height:1.25}
-    .journey-step p{margin:0;line-height:1.6;opacity:.85}
-    .journey-cta{margin-top:28px;text-align:center}
-
-    .seo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px}
-    .seo-card{padding:28px;border-radius:20px;background:#fff;border:1px solid #e3e8f0}
-    .seo-card h3{margin:0 0 10px;font-size:20px;line-height:1.25}
-    .seo-card p{margin:0;line-height:1.7}
-    .seo-checklist{margin-top:24px;padding:28px 32px;border-radius:20px;background:#fff4dc;border:1px solid #f2d08a;color:#1b1026}
-    .seo-checklist h3{margin:0 0 14px;font-size:20px}
-    .seo-checklist ul{margin:0 0 18px;padding:0;list-style:none;display:grid;gap:10px}
-    .seo-checklist li{position:relative;padding-left:30px;line-height:1.5}
-    .seo-checklist li::before{content:"✓";position:absolute;left:0;top:0;color:#167a46;font-weight:800}
-    .seo-checklist .btn-link{color:#1b1026;font-weight:700}
-
-    .highlight-card,.journey-step,.seo-card{transition:transform .22s ease,box-shadow .22s ease,background-color .22s ease,border-color .22s ease}
-    @media (hover:hover){
-      .highlight-card:hover{transform:translateY(-4px);background:rgba(255,255,255,.12);border-color:rgba(255,215,106,.55)}
-      .journey-step:hover,.seo-card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(20,30,60,.12)}
-    }
-    @media (max-width:1000px){
-      .highlight-grid,.journey-list{grid-template-columns:repeat(2,1fr)}
-      .seo-grid{grid-template-columns:1fr}
-    }
-    @media (max-width:620px){
-      .highlight-grid,.journey-list{grid-template-columns:1fr}
-      .highlight-card,.journey-step,.seo-card{padding:22px}
-      .seo-checklist{padding:22px}
-    }
-
-    .dash-top .dash-greeting{margin:4px 0;font-size:clamp(20px,2vw,26px);font-weight:700;line-height:1.2}
-
-    /* ===== Full-width layout: left/right khali jagah hatane ke liye ===== */
-    .wrap{box-sizing:border-box;width:100%!important;max-width:1840px!important;margin-left:auto!important;margin-right:auto!important;padding-left:clamp(16px,4vw,72px)!important;padding-right:clamp(16px,4vw,72px)!important}
-    .hero.wrap{gap:clamp(24px,4vw,72px)}
-    .highlight-head{max-width:900px}
-    .section-intro p,.product-proof-heading p{max-width:640px}
-
-    /* ===== UI polish layer (styles.css ke upar, layout nahi badalta) ===== */
-    html{scroll-behavior:smooth}
-    section[id]{scroll-margin-top:84px}
-    body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-    h1,h2,h3{text-wrap:balance}
-    p{text-wrap:pretty}
-    :focus-visible{outline:3px solid #ffb703;outline-offset:3px;border-radius:6px}
-
-    .header{-webkit-backdrop-filter:saturate(1.4) blur(12px);backdrop-filter:saturate(1.4) blur(12px);transition:box-shadow .25s ease}
-    .header.is-scrolled{box-shadow:0 6px 24px rgba(20,30,60,.10)}
-
-    .btn,.btn-wa,.wa-float,.nav-cta{transition:transform .18s ease,box-shadow .18s ease,background-color .18s ease,color .18s ease}
-    .btn:hover,.btn-wa:hover,.nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(20,30,60,.18)}
-    .btn:active,.btn-wa:active,.nav-cta:active{transform:translateY(0);box-shadow:none}
-    .wa-float:hover{transform:translateY(-3px)}
-    .hero-actions{flex-wrap:wrap;gap:12px 16px;align-items:center}
-
-    .module-card,.plan-card,.product-screen,.how-grid article,.audience-list>div,.testi-card,.ai-points li{transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
-    .module-card:hover,.plan-card:hover,.product-screen:hover,.how-grid article:hover,.audience-list>div:hover,.testi-card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(20,30,60,.12)}
-    .ai-points li:hover{transform:translateX(4px);border-color:#c9d3e3}
-    .product-screen img{transition:transform .35s ease}
-    .product-screen:hover img{transform:scale(1.02)}
-
-    .faq-list summary{cursor:pointer;transition:color .18s ease}
-    .faq-list details{transition:box-shadow .22s ease}
-    .faq-list details[open]{box-shadow:0 10px 26px rgba(20,30,60,.08)}
-
-    .contact-form input,.contact-form select,.contact-form textarea{transition:border-color .15s ease,box-shadow .15s ease}
-    .contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{outline:none;border-color:#f5b93a;box-shadow:0 0 0 4px rgba(245,185,58,.28)}
-
-    .compare-table tbody tr{transition:background-color .15s ease}
-    .compare-table tbody tr:hover{background:#f7f9fc}
-
-    /* scroll reveal (JS chalne par hi active hota hai) */
-    .js-reveal .reveal-on{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
-    .js-reveal .reveal-on.is-visible{opacity:1;transform:none}
-
-    @media (max-width:820px){
-      .module-card:hover,.plan-card:hover,.product-screen:hover,.how-grid article:hover,.audience-list>div:hover,.testi-card:hover{transform:none;box-shadow:none}
-      .offer-bar{font-size:13px;padding:9px 12px}
-    }
-    @media (prefers-reduced-motion:reduce){
-      html{scroll-behavior:auto}
-      *,*::before,*::after{transition:none!important;animation:none!important}
-      .js-reveal .reveal-on{opacity:1;transform:none}
-    }
-  </style>
+  <link rel="stylesheet" href="/site.css">
 
   <script type="application/ld+json">
   {
@@ -194,7 +42,7 @@
     "applicationCategory":"BusinessApplication",
     "operatingSystem":"Web",
     "description":"CRM software for Indian businesses to manage connected leads, sales pipelines, quotations, inventory, invoices, payments, campaigns and customer support, with an AI WhatsApp assistant.",
-    "featureList":["Lead capture from connected IndiaMART, Google Ads and Meta Ads sources","AI WhatsApp assistant for customer enquiries, order tracking, returns and support tickets","Sales pipeline tracking, tasks, smart notes and reminders","Multi-product quotations sent by email or WhatsApp","Product and stock tracking with invoice generation","Email and WhatsApp API messaging with reusable templates","Scheduled email and WhatsApp marketing campaigns with coupons","Payment gateway integration and payment tracking","Support desk, return and refund management","Multi-user roles, permissions, activity logs and configurable OTP login options"],
+    "featureList":["Lead capture from IndiaMART, Google Ads, Facebook/Meta Ads, website forms and custom pages", "Instant new-lead notifications and automatic email replies", "Round-robin and role-based automatic lead assignment", "Sales pipeline with lead status and full timeline history", "Smart notes, follow-ups and reminders with advance alerts", "Multi-product quotations with payment links", "Automatic order placement when the customer pays", "Multiple payment gateways, coupons and offers", "WhatsApp Business API chat with customers inside the CRM", "AI sales and support agent on WhatsApp with human hand-off", "Scheduled email and WhatsApp marketing campaigns", "Built-in and custom email templates with email open tracking", "Order management and delivery tracking with providers such as 17TRACK and USPS", "Support tickets, returns and refunds management", "Product listing, inventory and purchase management", "GST invoice generation and media management", "Dashboard and detailed CRM reports", "Users, custom roles, permissions and OTP login security", "Audit, login, authorization, error and general logs", "Storefront API for Next.js and React e-commerce websites"],
     "url":"https://vetracrm.in/"
   }
   </script>
@@ -213,7 +61,7 @@
   </script>
 
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is Vetra a good CRM for IndiaMART sellers?", "acceptedAnswer": {"@type": "Answer", "text": "Vetra is built for lead-driven Indian businesses. When your IndiaMART account is connected, enquiries come into your pipeline with alerts so your team can follow up, send quotations and track each buyer through to payment. We’ll confirm the setup for your account in the demo."}}, {"@type": "Question", "name": "What can I manage in Vetra CRM?", "acceptedAnswer": {"@type": "Answer", "text": "Vetra brings connected lead capture, a sales pipeline, reminders, product quotations, stock, invoices, customer messaging, an AI WhatsApp assistant, payment tracking and after-sales work into one workspace."}}, {"@type": "Question", "name": "What can the AI WhatsApp assistant do?", "acceptedAnswer": {"@type": "Answer", "text": "It can reply to customers on WhatsApp about enquiries, order tracking, returns and refunds, and support requests, and log issues in the CRM for your team. WhatsApp API setup is required for your business, and we’ll walk through it in the demo."}}, {"@type": "Question", "name": "Do I need the WhatsApp API to use the WhatsApp features?", "acceptedAnswer": {"@type": "Answer", "text": "Sending WhatsApp messages and quotations from Vetra, and using the AI assistant, needs a WhatsApp API connection for your business. We’ll explain the setup during the demo."}}, {"@type": "Question", "name": "Can Vetra capture IndiaMART, Google Ads and Meta Ads leads?", "acceptedAnswer": {"@type": "Answer", "text": "Leads from these sources can come into Vetra when the relevant connection is configured for your workspace. We’ll confirm the setup needed for your accounts during the demo."}}, {"@type": "Question", "name": "Can I send quotations on WhatsApp or email?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can prepare quotations with multiple products and send them using connected email or WhatsApp services. API/provider setup may be required for your business."}}, {"@type": "Question", "name": "Does Vetra track stock, invoices and payments?", "acceptedAnswer": {"@type": "Answer", "text": "Vetra includes product and stock tracking, invoice generation and payment tracking through an integrated payment gateway. The exact connection and workflow can be reviewed during your demo."}}, {"@type": "Question", "name": "How does pricing work?", "acceptedAnswer": {"@type": "Answer", "text": "CRM access is a monthly subscription. Setup and onboarding are optional one-time services. Share your business needs and team workflow so we can provide a quote for the relevant scope."}}, {"@type": "Question", "name": "What does the 20% Diwali offer apply to?", "acceptedAnswer": {"@type": "Answer", "text": "The offer covers the monthly CRM subscription and one-time setup. Submit your details and our team will confirm validity, the discounted amount and applicable dates in your written quote. The offer is not applied automatically at checkout."}}, {"@type": "Question", "name": "What happens after I request a demo?", "acceptedAnswer": {"@type": "Answer", "text": "Our team will review your enquiry and contact you to understand your business, lead sources and sales process. We’ll then walk through the relevant Vetra CRM workflow and discuss pricing."}}, {"@type": "Question", "name": "Can I control access for multiple users?", "acceptedAnswer": {"@type": "Answer", "text": "Vetra supports multiple users with roles and permissions, activity logs and configurable password/OTP login options. We can discuss the setup that fits your team."}}]}
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is Vetra a good CRM for IndiaMART sellers?", "acceptedAnswer": {"@type": "Answer", "text": "Vetra is built for lead-driven Indian businesses. When your IndiaMART account is connected, enquiries come into your pipeline with alerts so your team can follow up, send quotations and track each buyer through to payment. We’ll confirm the setup for your account in the demo."}}, {"@type": "Question", "name": "What can I manage in Vetra CRM?", "acceptedAnswer": {"@type": "Answer", "text": "Vetra brings connected lead capture, a sales pipeline, reminders, product quotations, stock, invoices, customer messaging, an AI WhatsApp assistant, payment tracking and after-sales work into one workspace."}}, {"@type": "Question", "name": "What can the AI WhatsApp assistant do?", "acceptedAnswer": {"@type": "Answer", "text": "It can reply to customers on WhatsApp about enquiries, order tracking, returns and refunds, and support requests, and log issues in the CRM for your team. WhatsApp API setup is required for your business, and we’ll walk through it in the demo."}}, {"@type": "Question", "name": "Do I need the WhatsApp API to use the WhatsApp features?", "acceptedAnswer": {"@type": "Answer", "text": "Sending WhatsApp messages and quotations from Vetra, and using the AI assistant, needs a WhatsApp API connection for your business. We’ll explain the setup during the demo."}}, {"@type": "Question", "name": "Can Vetra capture IndiaMART, Google Ads and Meta Ads leads?", "acceptedAnswer": {"@type": "Answer", "text": "Leads from these sources can come into Vetra when the relevant connection is configured for your workspace. We’ll confirm the setup needed for your accounts during the demo."}}, {"@type": "Question", "name": "Can I send quotations on WhatsApp or email?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can prepare quotations with multiple products and send them using connected email or WhatsApp services. API/provider setup may be required for your business."}}, {"@type": "Question", "name": "Does Vetra track stock, invoices and payments?", "acceptedAnswer": {"@type": "Answer", "text": "Vetra includes product and stock tracking, invoice generation and payment tracking through an integrated payment gateway. The exact connection and workflow can be reviewed during your demo."}}, {"@type": "Question", "name": "What is the difference between Vetra Cloud and Vetra Self-Hosted?", "acceptedAnswer": {"@type": "Answer", "text": "Vetra Cloud is hosted by us: your team gets a login and pays monthly for the Starter, Growth or Pro plan. Vetra Self-Hosted is installed on your own server with every Pro feature included, so your data stays on your infrastructure and you pay a one-time license."}}, {"@type": "Question", "name": "How does pricing work?", "acceptedAnswer": {"@type": "Answer", "text": "Vetra Cloud has three monthly plans: Starter at ₹1,999 (up to 3 users), Growth at ₹4,999 (up to 10 users) and Pro at ₹9,999 (up to 25 users), GST extra. Vetra Self-Hosted starts at ₹1,49,999 one-time for your own server, with optional annual support and updates at ₹29,999 per year."}}, {"@type": "Question", "name": "What does the 20% Christmas offer apply to?", "acceptedAnswer": {"@type": "Answer", "text": "The offer covers the monthly CRM subscription and one-time setup. Submit your details and our team will confirm validity, the discounted amount and applicable dates in your written quote. The offer is not applied automatically at checkout."}}, {"@type": "Question", "name": "What happens after I request a demo?", "acceptedAnswer": {"@type": "Answer", "text": "Our team will review your enquiry and contact you to understand your business, lead sources and sales process. We’ll then walk through the relevant Vetra CRM workflow and discuss pricing."}}, {"@type": "Question", "name": "Can I control access for multiple users?", "acceptedAnswer": {"@type": "Answer", "text": "Vetra supports multiple users with roles and permissions, activity logs and configurable password/OTP login options. We can discuss the setup that fits your team."}}]}
   </script>
 
   <!-- Google tag (gtag.js) -->
@@ -229,17 +77,17 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- NEW: Diwali offer bar.
+  <!-- Christmas offer bar (25 Dec ke baad site.js ise apne aap chhupa deta hai).
        Offer text yahin badlo. Reels aur banner me jo offer bol rahe ho (20% off ya free installation), wahi yahan likho.
        Last date pata ho to "Limited time." ki jagah "Valid till <date>." likh do. -->
-  <div class="offer-bar" role="region" aria-label="Diwali offer"><b>Diwali offer:</b> 20% off the monthly CRM subscription and one-time setup. Limited time. <a href="#contact">Claim the offer →</a></div>
+  <div class="offer-bar" role="region" aria-label="Christmas offer"><b>Christmas offer:</b> 20% off Cloud plans and one-time setup, valid till 25 December 2026. <a href="#contact">Claim the offer →</a></div>
 
   <header class="header">
     <nav class="nav wrap" aria-label="Main navigation">
       <a class="brand" href="#top" aria-label="Vetra CRM home"><img src="/assets/logo.png" alt="Vetra" width="128" height="54"><span>CRM</span></a>
       <button class="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation"><i></i><i></i></button>
       <div class="nav-menu" id="nav-menu">
-        <a href="#features">Features</a><a href="#video">See how it works</a><a href="#businesses">Who it’s for</a><a href="#plans">Plans</a><a href="#faq">FAQs</a><a href="/blog/">Blog</a>
+        <a href="/features/">Features</a><a href="/cloud-crm/">Cloud CRM</a><a href="/self-hosted-crm/">Self-Hosted CRM</a><a href="#plans">Plans</a><a href="#faq">FAQs</a><a href="/blog/">Blog</a>
         <a class="nav-cta" href="#contact">Book a free demo <span aria-hidden="true">↗</span></a>
       </div>
     </nav>
@@ -248,11 +96,11 @@
   <main id="main">
     <section class="hero wrap" id="top">
       <div class="hero-copy">
-        <div class="offer-chip"><span aria-hidden="true">✦</span> Diwali offer: 20% off subscription + setup</div>
+        <div class="offer-chip"><span aria-hidden="true">✦</span> Christmas offer: 20% off till 25 December</div>
         <div class="kicker"><span></span> CRM FOR INDIAMART SELLERS &amp; INDIAN BUSINESSES</div>
         <h1>The CRM that turns every enquiry into a sale, <em>from first lead to final payment.</em></h1>
         <p class="hero-lede">Vetra CRM captures IndiaMART, Google Ads and Meta Ads leads, sends quotations on WhatsApp and email, tracks stock, invoices and payments, and replies to customers with an AI WhatsApp assistant, all in one place for your team.</p>
-        <div class="hero-actions"><a class="btn btn-primary" href="#contact">Book your free demo <span>↗</span></a><a class="btn-wa" data-wa="hero" href="#" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4v-4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg>Chat on WhatsApp</a><a class="btn-link" href="#features">Explore all features <span>↓</span></a></div>
+        <div class="hero-actions"><a class="btn btn-primary" href="#contact">Book your free demo <span>↗</span></a><a class="btn-wa" data-wa="hero" href="#" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41Z"/></svg>Chat on WhatsApp</a><a class="btn-link" href="#features">Explore all features <span>↓</span></a></div>
         <div class="hero-caption"><span class="caption-check">✓</span> Free demo, tailored to your lead sources and sales process.</div>
       </div>
       <div class="hero-product" aria-label="Illustrative Vetra CRM dashboard preview">
@@ -288,7 +136,7 @@
           <article class="highlight-card"><span class="highlight-icon" aria-hidden="true">₹</span><h3>Track stock, invoices and payments</h3><p>Manage products and stock, generate invoices and follow payment status through your payment gateway.</p></article>
           <article class="highlight-card"><span class="highlight-icon" aria-hidden="true">♙</span><h3>Keep your team in control</h3><p>Set roles and permissions, review activity logs and choose password or OTP login options.</p></article>
         </div>
-        <div class="highlight-cta"><a class="btn btn-primary" href="#contact">Book your free demo <span>↗</span></a><a class="btn-wa" data-wa="highlight" href="#" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4v-4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg>Chat on WhatsApp</a></div>
+        <div class="highlight-cta"><a class="btn btn-primary" href="#contact">Book your free demo <span>↗</span></a><a class="btn-wa" data-wa="highlight" href="#" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41Z"/></svg>Chat on WhatsApp</a></div>
       </div>
     </section>
 
@@ -317,30 +165,35 @@
       <div class="ai-spotlight">
         <div class="ai-copy">
           <span class="ai-tag">AI ASSISTANT</span>
-          <h3>An AI assistant that replies to your customers on WhatsApp</h3>
-          <p>Give customers quick answers on WhatsApp for enquiries, order tracking, returns and refunds, and support requests, so your team can spend more time on closing sales.</p>
+          <h3>An AI agent that sells and supports on WhatsApp, without a human</h3>
+          <p>Connect your AI provider’s API key and the agent talks to customers like a sales and support executive: it answers product enquiries, shares order status, handles support issues and creates tickets. Critical or sensitive chats are handed to a human automatically.</p>
           <a class="btn btn-primary" href="#contact">See the AI assistant live <span>↗</span></a>
         </div>
         <ul class="ai-points">
           <li><b>Enquiries and sales questions</b><span>Customers get a quick first reply, even when your team is busy.</span></li>
           <li><b>Order tracking</b><span>Customers can ask about their order status on WhatsApp.</span></li>
-          <li><b>Returns and refunds</b><span>Return and refund requests are captured with a clear record.</span></li>
+          <li><b>Hand-off to a human</b><span>When a chat needs a person, the AI transfers it to your team automatically.</span></li>
           <li><b>Support tickets</b><span>Issues are logged in the CRM so your team can follow up.</span></li>
         </ul>
-        <p class="ai-note">Requires WhatsApp API setup for your business.</p>
+        <p class="ai-note">Included in the Pro plan and Self-Hosted. Requires WhatsApp Business API and an AI provider API key.</p>
       </div>
 
       <div class="module-grid">
-        <article class="module-card"><div class="module-head"><span class="module-icon icon-lead">↗</span><span class="module-count">01</span></div><h3>Bring leads into one place</h3><p>Receive enquiries from connected sources such as IndiaMART, Google Ads and Meta Ads. Get notified when a new lead arrives and keep it moving through your pipeline.</p><div class="module-tags"><span>Lead capture</span><span>New lead alerts</span><span>Sales pipeline</span></div><div class="module-benefit"><b>Business benefit</b><span>Respond sooner and see which opportunities need attention.</span></div></article>
+        <article class="module-card"><div class="module-head"><span class="module-icon icon-lead">↗</span><span class="module-count">01</span></div><h3>Bring leads into one place</h3><p>Receive enquiries from IndiaMART, Google Ads, Facebook Ads, your website and custom pages. Your team is notified, the customer gets an automatic email reply, and every status change is saved in the lead timeline.</p><div class="module-tags"><span>Lead capture</span><span>Auto email reply</span><span>Lead timeline</span></div><div class="module-benefit"><b>Business benefit</b><span>Respond sooner and see which opportunities need attention.</span></div></article>
         <article class="module-card"><div class="module-head"><span class="module-icon icon-task">◷</span><span class="module-count">02</span></div><h3>Make every next step clear</h3><p>Create tasks for calls, meetings and other work. Add smart notes and reminders so important follow-ups come back to you on time.</p><div class="module-tags"><span>Task management</span><span>Smart notes</span><span>Reminders</span></div><div class="module-benefit"><b>Business benefit</b><span>Keep customer conversations active without relying on memory.</span></div></article>
-        <article class="module-card"><div class="module-head"><span class="module-icon icon-quote">▤</span><span class="module-count">03</span></div><h3>Build and send quotations</h3><p>Add multiple products to a quotation, then send it to your customer by email or WhatsApp using templates. Get notified when a quotation is viewed.</p><div class="module-tags"><span>Multi-product quotes</span><span>Email</span><span>WhatsApp</span></div><div class="module-benefit"><b>Business benefit</b><span>Prepare offers faster and follow up when customers are ready.</span></div></article>
-        <article class="module-card"><div class="module-head"><span class="module-icon icon-stock">▦</span><span class="module-count">04</span></div><h3>Track products, stock and invoices</h3><p>Maintain product and stock information, follow stock levels, and generate invoices as part of your sales workflow.</p><div class="module-tags"><span>Product catalogue</span><span>Stock tracking</span><span>Invoices</span></div><div class="module-benefit"><b>Business benefit</b><span>Keep product availability and sales paperwork easier to manage.</span></div></article>
-        <article class="module-card"><div class="module-head"><span class="module-icon icon-message">✉</span><span class="module-count">05</span></div><h3>Message customers where they are</h3><p>Connect your email and WhatsApp APIs to send customer messages. Use templates for repeat messages and send WhatsApp messages directly to customers.</p><div class="module-tags"><span>Email connection</span><span>WhatsApp API</span><span>Message templates</span></div><div class="module-benefit"><b>Business benefit</b><span>Keep customer communication connected to your sales work.</span></div></article>
-        <article class="module-card"><div class="module-head"><span class="module-icon icon-campaign">◉</span><span class="module-count">06</span></div><h3>Run email and WhatsApp campaigns</h3><p>Create campaigns with multiple templates, schedule them, and create coupons to share offers with customers.</p><div class="module-tags"><span>Email marketing</span><span>WhatsApp marketing</span><span>Coupons</span></div><div class="module-benefit"><b>Business benefit</b><span>Plan customer outreach and offers from one campaign workspace.</span></div></article>
-        <article class="module-card"><div class="module-head"><span class="module-icon icon-payment">₹</span><span class="module-count">07</span></div><h3>Connect payment tracking</h3><p>Integrate a payment gateway to track customer payments. Receive notifications for payment updates, new leads and quotations viewed.</p><div class="module-tags"><span>Payment gateway</span><span>Payment status</span><span>Notifications</span></div><div class="module-benefit"><b>Business benefit</b><span>Know when a customer pays and keep the sales record up to date.</span></div></article>
-        <article class="module-card"><div class="module-head"><span class="module-icon icon-support">↩</span><span class="module-count">08</span></div><h3>Manage support, returns and refunds</h3><p>Handle customer support requests and track returns and refunds with a clear record of their progress.</p><div class="module-tags"><span>Support desk</span><span>Returns</span><span>Refund tracking</span></div><div class="module-benefit"><b>Business benefit</b><span>Keep after-sales service visible alongside the customer relationship.</span></div></article>
-        <article class="module-card"><div class="module-head"><span class="module-icon icon-team">♙</span><span class="module-count">09</span></div><h3>Manage users, roles and security</h3><p>Add multiple users, set roles and permissions, review logs, and choose password-only, password-plus-OTP or OTP-only login options.</p><div class="module-tags"><span>Team access</span><span>Role permissions</span><span>Login security</span></div><div class="module-benefit"><b>Business benefit</b><span>Give each team member appropriate access and review important activity.</span></div></article>
+        <article class="module-card"><div class="module-head"><span class="module-icon icon-quote">▤</span><span class="module-count">03</span></div><h3>Build and send quotations</h3><p>Add multiple products to a quotation with a payment link, and send it by email or WhatsApp. When the customer pays, the CRM is notified and the order is placed automatically.</p><div class="module-tags"><span>Multi-product quotes</span><span>Payment link</span><span>Auto order</span></div><div class="module-benefit"><b>Business benefit</b><span>Prepare offers faster and follow up when customers are ready.</span></div></article>
+        <article class="module-card"><div class="module-head"><span class="module-icon icon-stock">▦</span><span class="module-count">04</span></div><h3>Products, inventory and GST invoices</h3><p>Manage your product listing, purchases and stock, generate GST invoices, and keep images and invoices in the media library.</p><div class="module-tags"><span>Inventory</span><span>Purchases</span><span>GST invoices</span></div><div class="module-benefit"><b>Business benefit</b><span>Keep product availability and sales paperwork easier to manage.</span></div></article>
+        <article class="module-card"><div class="module-head"><span class="module-icon icon-message">✉</span><span class="module-count">05</span></div><h3>Message customers where they are</h3><p>Connect the WhatsApp Business API and chat with customers inside the CRM. Share product details, quotations, orders, coupons and ticket status right in the chat.</p><div class="module-tags"><span>WhatsApp CRM</span><span>Two-way chat</span><span>Share details</span></div><div class="module-benefit"><b>Business benefit</b><span>Keep customer communication connected to your sales work.</span></div></article>
+        <article class="module-card"><div class="module-head"><span class="module-icon icon-campaign">◉</span><span class="module-count">06</span></div><h3>Run email and WhatsApp campaigns</h3><p>Schedule email and WhatsApp campaigns, use built-in or custom templates with multiple sender accounts, and see which emails were opened.</p><div class="module-tags"><span>Email marketing</span><span>WhatsApp marketing</span><span>Open tracking</span></div><div class="module-benefit"><b>Business benefit</b><span>Plan customer outreach and offers from one campaign workspace.</span></div></article>
+        <article class="module-card"><div class="module-head"><span class="module-icon icon-payment">₹</span><span class="module-count">07</span></div><h3>Connect multiple payment gateways</h3><p>Configure one or more payment gateways, create coupons and offers, and get notified for payments, new leads and quotations viewed.</p><div class="module-tags"><span>Multiple gateways</span><span>Coupons</span><span>Notifications</span></div><div class="module-benefit"><b>Business benefit</b><span>Know when a customer pays and keep the sales record up to date.</span></div></article>
+        <article class="module-card"><div class="module-head"><span class="module-icon icon-support">↩</span><span class="module-count">08</span></div><h3>Manage support, returns and refunds</h3><p>Handle support tickets, returns and refunds from the CRM, without going to your payment gateway portal.</p><div class="module-tags"><span>Support tickets</span><span>Returns</span><span>Refunds</span></div><div class="module-benefit"><b>Business benefit</b><span>Keep after-sales service visible alongside the customer relationship.</span></div></article>
+        <article class="module-card"><div class="module-head"><span class="module-icon icon-team">♙</span><span class="module-count">09</span></div><h3>Manage users, roles and security</h3><p>Admins control every setting: users, custom roles and permissions, lead visibility, OTP login, and audit, login, authorization, error and general logs.</p><div class="module-tags"><span>Custom roles</span><span>Audit logs</span><span>Login security</span></div><div class="module-benefit"><b>Business benefit</b><span>Give each team member appropriate access and review important activity.</span></div></article>
+      
+        <article class="module-card"><div class="module-head"><span class="module-icon icon-lead">⇄</span><span class="module-count">10</span></div><h3>Assign leads automatically</h3><p>Share new leads by round robin, or route them to a specific user or role. Choose whether users see all leads or only their own.</p><div class="module-tags"><span>Round robin</span><span>Role routing</span><span>Lead visibility</span></div><div class="module-benefit"><b>Business benefit</b><span>Every lead has an owner the moment it arrives.</span></div></article>
+        <article class="module-card"><div class="module-head"><span class="module-icon icon-stock">⛟</span><span class="module-count">11</span></div><h3>Track orders and deliveries</h3><p>Follow every order from payment to delivery. Connect tracking providers such as 17TRACK and USPS and share status with customers.</p><div class="module-tags"><span>Order tracking</span><span>Delivery tracking</span><span>Multiple providers</span></div><div class="module-benefit"><b>Business benefit</b><span>Answer “where is my order?” without leaving the CRM.</span></div></article>
+        <article class="module-card"><div class="module-head"><span class="module-icon icon-campaign">⌘</span><span class="module-count">12</span></div><h3>Build your online store with the API</h3><p>Use the storefront API to build an e-commerce website in Next.js or React. Products, stock and coupons come from Vetra, and every order lands in the CRM.</p><div class="module-tags"><span>Storefront API</span><span>Next.js / React</span><span>E-commerce</span></div><div class="module-benefit"><b>Business benefit</b><span>Run your website store and your CRM from one system.</span></div></article>
       </div>
+      <p class="tier-note"><a class="btn-link" href="/features/">See every feature and which plan includes it <span>↗</span></a></p>
       <div class="growth-band"><div><span class="growth-label">ONE CUSTOMER JOURNEY</span><b>Lead <i>→</i> Pipeline <i>→</i> Quotation <i>→</i> Payment <i>→</i> Support</b></div><a class="btn btn-primary" href="#contact">Start your free demo <span>↗</span></a></div>
     </section>
 
@@ -413,7 +266,35 @@
       </div>
     </section>
 
-    <section class="plans-section" id="plans"><div class="wrap"><div class="section-intro plans-intro"><div><div class="kicker"><span></span> MONTHLY CRM + OPTIONAL ONE-TIME SETUP</div><h2>Choose the support<br><em>that suits your team.</em></h2></div><p>CRM access is on a monthly subscription. If you need help getting started, ask us about one-time setup and onboarding too.</p></div><div class="plans-grid"><article class="plan-card"><div class="plan-symbol">↻</div><div class="plan-caption">ONGOING CRM ACCESS</div><h3>Monthly subscription</h3><p>Use Vetra CRM to manage your customer and sales work month to month.</p><ul><li>Manage leads and customer records</li><li>Track sales opportunities by stage</li><li>Record notes, activities and follow-up tasks</li><li>View an overview of team activity</li></ul><a class="btn btn-primary" href="#contact">Get monthly pricing <span>↗</span></a></article><article class="plan-card plan-setup"><div class="plan-symbol">✳</div><div class="plan-caption">OPTIONAL ONE-TIME SERVICE</div><h3>Setup &amp; onboarding</h3><p>Get help preparing the CRM for your team and agreed way of working.</p><ul><li>Discuss your current lead and customer process</li><li>Configure the agreed CRM setup</li><li>Review options for importing existing data</li><li>Walk your team through the agreed workflow</li></ul><a class="btn btn-outline" href="#contact">Get a setup quote <span>↗</span></a></article></div><p class="pricing-note">One-time setup is a separate service; CRM access remains on a monthly subscription. Contact us for current pricing in INR. Your quote will confirm the scope, price and applicable taxes. Diwali offer: 20% off the monthly subscription and one-time setup, confirmed in your written quote.</p></div></section>
+    <section class="plans-section" id="plans" aria-labelledby="plans-title"><div class="wrap">
+      <div class="section-intro plans-intro"><div><div class="kicker"><span></span> TWO WAYS TO USE VETRA CRM</div><h2 id="plans-title">Cloud plans or<br><em>your own server.</em></h2></div><p>Start on a monthly cloud plan hosted by us, or install the complete CRM on your own server with a one-time license.</p></div>
+      <div class="product-choice">
+        <article class="choice-card">
+          <span class="choice-tag">VETRA CLOUD · MONTHLY</span>
+          <h3>Cloud CRM, hosted by us</h3>
+          <p class="choice-price"><b>From ₹1,999</b>/month + GST</p><p>Get a login for your team and start right away. No server, no installation. Choose the plan that fits:</p>
+          <ul>
+            <li><b>Starter (₹1,999/mo):</b> leads, auto email reply, pipeline, follow-ups, quotations with payment links, orders and GST invoices</li>
+            <li><b>Growth (₹4,999/mo):</b> adds auto lead assignment, WhatsApp chat, campaigns, delivery tracking, returns and refunds</li>
+            <li><b>Pro (₹9,999/mo):</b> adds the AI WhatsApp agent, storefront API, detailed reports and full logs</li>
+          </ul>
+          <div class="choice-actions"><a class="btn btn-primary" href="/cloud-crm/#plans">Compare Cloud plans <span>↗</span></a><a class="btn-link" href="#contact" data-plan="Cloud CRM: Growth plan">Get pricing <span>↗</span></a></div>
+        </article>
+        <article class="choice-card is-dark">
+          <span class="choice-tag">VETRA SELF-HOSTED · ONE-TIME LICENSE</span>
+          <h3>The complete CRM on your server</h3>
+          <p class="choice-price"><b>From ₹1,49,999</b> one-time + GST</p><p>We install Vetra on your own server and domain. Every Pro feature is included and your data stays with you.</p>
+          <ul>
+            <li>Runs on your cloud VPS or own data centre</li>
+            <li>Every feature, including the AI agent and storefront API</li>
+            <li>Installed, configured and trained by our team</li>
+            <li>Optional annual support and updates at ₹29,999/year</li>
+          </ul>
+          <div class="choice-actions"><a class="btn btn-primary" href="/self-hosted-crm/">Explore Self-Hosted <span>↗</span></a><a class="btn-link" href="#contact" data-plan="Self-hosted CRM (on my own server)">Get a quote <span>↗</span></a></div>
+        </article>
+      </div>
+      <p class="pricing-note">Cloud plans are billed monthly in INR and Self-Hosted is a one-time license. All prices exclude GST. Christmas offer: 20% off Cloud plans and one-time setup till 25 December 2026.</p>
+    </div></section>
 
     <section class="how-section"><div class="wrap"><div class="how-heading"><div class="kicker"><span></span> GETTING STARTED</div><h2>From enquiry to<br><em>up and running.</em></h2></div><div class="how-grid"><article><span>01</span><h3>Tell us what you need</h3><p>Share your business type, team size and how you manage enquiries today.</p></article><article><span>02</span><h3>Review your options</h3><p>We’ll discuss the monthly CRM subscription and any setup support you may need.</p></article><article><span>03</span><h3>Set up your workflow</h3><p>Agree the scope, get your workspace ready and help your team get started.</p></article></div><a class="btn btn-primary getting-started-cta" href="#contact">Start with a free demo <span>↗</span></a></div></section>
 
@@ -425,22 +306,23 @@
       <details><summary>Can Vetra capture IndiaMART, Google Ads and Meta Ads leads?</summary><p>Leads from these sources can come into Vetra when the relevant connection is configured for your workspace. We’ll confirm the setup needed for your accounts during the demo.</p></details>
       <details><summary>Can I send quotations on WhatsApp or email?</summary><p>Yes. You can prepare quotations with multiple products and send them using connected email or WhatsApp services. API/provider setup may be required for your business.</p></details>
       <details><summary>Does Vetra track stock, invoices and payments?</summary><p>Vetra includes product and stock tracking, invoice generation and payment tracking through an integrated payment gateway. The exact connection and workflow can be reviewed during your demo.</p></details>
-      <details><summary>How does pricing work?</summary><p>CRM access is a monthly subscription. Setup and onboarding are optional one-time services. Share your business needs and team workflow so we can provide a quote for the relevant scope.</p></details>
-      <details><summary>What does the 20% Diwali offer apply to?</summary><p>The offer covers the monthly CRM subscription and one-time setup. Submit your details and our team will confirm validity, the discounted amount and applicable dates in your written quote. The offer is not applied automatically at checkout.</p></details>
+      <details><summary>What is the difference between Vetra Cloud and Vetra Self-Hosted?</summary><p>Vetra Cloud is hosted by us: your team gets a login and pays monthly for the Starter, Growth or Pro plan. Vetra Self-Hosted is installed on your own server with every Pro feature included, so your data stays on your infrastructure and you pay a one-time license.</p></details>
+      <details><summary>How does pricing work?</summary><p>Vetra Cloud has three monthly plans: Starter at ₹1,999 (up to 3 users), Growth at ₹4,999 (up to 10 users) and Pro at ₹9,999 (up to 25 users), GST extra. Vetra Self-Hosted starts at ₹1,49,999 one-time for your own server, with optional annual support and updates at ₹29,999 per year.</p></details>
+      <details><summary>What does the 20% Christmas offer apply to?</summary><p>The offer gives 20% off Vetra Cloud plans and one-time setup until 25 December 2026: Starter at ₹1,599, Growth at ₹3,999 and Pro at ₹7,999 per month (GST extra). Submit your details and our team will confirm the offer in your written quote.</p></details>
       <details><summary>What happens after I request a demo?</summary><p>Our team will review your enquiry and contact you to understand your business, lead sources and sales process. We’ll then walk through the relevant Vetra CRM workflow and discuss pricing.</p></details>
       <details><summary>Can I control access for multiple users?</summary><p>Vetra supports multiple users with roles and permissions, activity logs and configurable password/OTP login options. We can discuss the setup that fits your team.</p></details>
     </div></div></section>
 
-    <section class="contact-section" id="contact"><div class="wrap contact-wrap"><div class="contact-copy"><div class="kicker kicker-light"><span></span> LET’S TALK ABOUT YOUR BUSINESS</div><h2>Ready to turn more enquiries<br><em>into sales?</em></h2><p>Tell us about your business and lead sources. We’ll walk you through Vetra CRM, monthly pricing, setup support and the Diwali offer.</p><div class="contact-detail"><span>01</span><span><b>Share your requirements</b><small>We’ll use your details to respond to your enquiry.</small></span></div></div><form class="contact-form" id="contact-form" name="contact" method="POST">
+    <section class="contact-section" id="contact"><div class="wrap contact-wrap"><div class="contact-copy"><div class="kicker kicker-light"><span></span> LET’S TALK ABOUT YOUR BUSINESS</div><h2>Ready to turn more enquiries<br><em>into sales?</em></h2><p>Tell us about your business and lead sources. We’ll walk you through Vetra CRM, monthly pricing, setup support and the Christmas offer.</p><div class="contact-detail"><span>01</span><span><b>Share your requirements</b><small>We’ll use your details to respond to your enquiry.</small></span></div></div><form class="contact-form" id="contact-form" name="contact" method="POST">
       <p class="hidden-field"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
       <div class="form-heading"><h3>Get your free demo</h3><p>Fields marked * are required.</p></div>
       <!-- NEW: mobile ab required hai; city aur state hata diye (form chhota = zyada leads). -->
-      <div class="form-grid"><label>Full name <em>*</em><input required name="name" autocomplete="name" placeholder="Your name"></label><label>Business name <em>*</em><input required name="business" autocomplete="organization" placeholder="Your business"></label><label>Work email <em>*</em><input required type="email" name="email" autocomplete="email" placeholder="you@company.com"></label><label>Mobile / WhatsApp number <em>*</em><input required type="tel" name="phone" autocomplete="tel" inputmode="tel" pattern="[0-9+\s\-]{10,15}" title="Enter a valid mobile number, 10 to 15 digits" placeholder="+91 98765 43210"></label><label>Business type <em>*</em><select required name="business_type"><option value="" disabled selected>Select your business type</option><option>IndiaMART seller</option><option>Manufacturer or supplier</option><option>Wholesaler or distributor</option><option>B2B trading or export</option><option>Professional or service business</option><option>Consulting or agency</option><option>E-commerce</option><option>Retail or trading</option><option>Real estate</option><option>Education or training</option><option>Sales team</option><option>Other</option></select></label><label>What are you interested in? <select name="interest"><option value="" disabled selected>Select one</option><option>Diwali offer (20% off subscription + setup)</option><option>Monthly CRM subscription</option><option>One-time setup and onboarding</option><option>Both</option><option>Not sure yet</option></select></label><label class="form-full">What would you like help with? <span class="optional">Optional</span><textarea name="message" rows="3" placeholder="A little about your team or current process…"></textarea></label></div>
+      <div class="form-grid"><label>Full name <em>*</em><input required name="name" autocomplete="name" placeholder="Your name"></label><label>Business name <em>*</em><input required name="business" autocomplete="organization" placeholder="Your business"></label><label>Work email <em>*</em><input required type="email" name="email" autocomplete="email" placeholder="you@company.com"></label><label>Mobile / WhatsApp number <em>*</em><input required type="tel" name="phone" autocomplete="tel" inputmode="tel" pattern="[0-9+\s\-]{10,15}" title="Enter a valid mobile number, 10 to 15 digits" placeholder="+91 98765 43210"></label><label>Business type <em>*</em><select required name="business_type"><option value="" disabled selected>Select your business type</option><option>IndiaMART seller</option><option>Manufacturer or supplier</option><option>Wholesaler or distributor</option><option>B2B trading or export</option><option>Professional or service business</option><option>Consulting or agency</option><option>E-commerce</option><option>Retail or trading</option><option>Real estate</option><option>Education or training</option><option>Sales team</option><option>Other</option></select></label><label>What are you interested in? <select name="interest"><option value="" disabled selected>Select one</option><option>Christmas offer (20% off subscription + setup)</option><option>Cloud CRM: Starter plan</option><option>Cloud CRM: Growth plan</option><option>Cloud CRM: Pro plan</option><option>Self-hosted CRM (on my own server)</option><option>One-time setup and onboarding</option><option>Not sure yet, help me choose</option></select></label><label class="form-full">What would you like help with? <span class="optional">Optional</span><textarea name="message" rows="3" placeholder="A little about your team or current process…"></textarea></label></div>
       <div class="form-bottom"><p>By submitting, you agree we may contact you about Vetra CRM. See our <a href="/privacy.html">privacy notice</a>.</p><button class="btn btn-primary" type="submit">Claim my free demo <span>↗</span></button></div><p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
     </form></div></section>
   </main>
 
-  <footer class="footer"><div class="wrap footer-top"><a class="brand" href="#top" aria-label="Vetra CRM home"><img src="/assets/logo.png" alt="Vetra" width="128" height="54"><span>CRM</span></a><p>Simple CRM for better<br>customer relationships.</p><div class="footer-nav"><a href="#features">Features</a><a href="#video">See how it works</a><a href="#businesses">Who it’s for</a><a href="#plans">Plans</a><a href="#faq">FAQs</a><a href="/blog/">Blog</a><a href="#contact">Contact</a><a data-wa="footer" href="#" hidden>WhatsApp</a><a href="/privacy.html">Privacy</a></div><a href="#top" class="back-top">Back to top ↑</a></div><div class="wrap footer-bottom"><span>© <span id="year">2026</span> Vetra CRM. All rights reserved.</span><span>CRM software for Indian businesses</span>
+  <footer class="footer"><div class="wrap footer-top"><a class="brand" href="#top" aria-label="Vetra CRM home"><img src="/assets/logo.png" alt="Vetra" width="128" height="54"><span>CRM</span></a><p>Simple CRM for better<br>customer relationships.</p><div class="footer-nav"><a href="/features/">Features</a><a href="/cloud-crm/">Cloud CRM</a><a href="/self-hosted-crm/">Self-Hosted CRM</a><a href="#plans">Plans</a><a href="#faq">FAQs</a><a href="/blog/">Blog</a><a href="#contact">Contact</a><a data-wa="footer" href="#" hidden>WhatsApp</a><a href="/privacy.html">Privacy</a></div><a href="#top" class="back-top">Back to top ↑</a></div><div class="wrap footer-bottom"><span>© <span id="year">2026</span> Vetra CRM. All rights reserved.</span><span>CRM software for Indian businesses</span>
       <div class="social-links" aria-label="Vetra CRM social media">
   <a href="https://www.facebook.com/people/Vetra-Crm/61596019807651/" target="_blank" rel="noopener noreferrer" aria-label="Vetra CRM on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.5 1.6-1.5h1.7V3.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.2v3.2H10V21h3.4Z"/></svg></a>
   <a href="https://www.instagram.com/vetracrm/" target="_blank" rel="noopener noreferrer" aria-label="Vetra CRM on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.7" cy="6.6" r="1.2"/></svg></a>
@@ -450,83 +332,9 @@
 </div></div></footer>
 
   <!-- NEW: floating WhatsApp button (number set hone par hi dikhta hai) -->
-  <a class="wa-float" data-wa="float" href="#" hidden aria-label="Chat with Vetra CRM on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4v-4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg><span>Chat on WhatsApp</span></a>
+  <a class="wa-float" data-wa="float" href="#" hidden aria-label="Chat with Vetra CRM on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41Z"/></svg><span>Chat on WhatsApp</span></a>
 
-  <!-- NEW: WhatsApp links, UTM capture aur lead tracking.
-       1) Neeche WHATSAPP_NUMBER me apna number daalo (country code ke saath, + ke bina, jaise "919876543210").
-          Jab tak number sahi format me nahi hota, saare WhatsApp buttons apne aap chhupe rehte hain.
-       2) Form me utm_* hidden fields judte hain. Tumhara form-submit code FormData bhejta hai to ye lead ke saath chale jaayenge.
-       3) Google Analytics me "generate_lead" aur "whatsapp_click" events jaate hain. -->
-  <script>
-  (function () {
-    var WHATSAPP_NUMBER = "91XXXXXXXXXX";
-    var message = encodeURIComponent("Hi, I'd like a demo of Vetra CRM.");
-    var valid = /^\d{10,15}$/.test(WHATSAPP_NUMBER);
-
-    document.querySelectorAll("[data-wa]").forEach(function (a) {
-      if (!valid) { a.hidden = true; return; }
-      a.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + message;
-      a.target = "_blank";
-      a.rel = "noopener noreferrer";
-      a.hidden = false;
-      a.addEventListener("click", function () {
-        if (window.gtag) { gtag("event", "whatsapp_click", { location: a.getAttribute("data-wa") }); }
-      });
-    });
-
-    var form = document.getElementById("contact-form");
-    if (form) {
-      var params = new URLSearchParams(window.location.search);
-      ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"].forEach(function (key) {
-        var input = document.createElement("input");
-        input.type = "hidden";
-        input.name = key;
-        input.value = params.get(key) || "";
-        form.appendChild(input);
-      });
-      form.addEventListener("submit", function () {
-        if (window.gtag) { gtag("event", "generate_lead", { form: "demo_request" }); }
-      });
-    }
-  })();
-  </script>
-  <!-- NEW: UI polish (header shadow + scroll reveal). JS na chale to page normal dikhta hai. -->
-  <script>
-  (function () {
-    var header = document.querySelector(".header");
-    if (header) {
-      var onScroll = function () { header.classList.toggle("is-scrolled", window.scrollY > 8); };
-      onScroll();
-      window.addEventListener("scroll", onScroll, { passive: true });
-    }
-
-    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!("IntersectionObserver" in window) || reduce) { return; }
-
-    var targets = document.querySelectorAll(".module-card, .plan-card, .product-screen, .how-grid article, .audience-list > div, .ai-spotlight, .compare-wrap, .faq-list details, .growth-band, .testi-card, .product-walkthrough, .video-takeaways article, .highlight-card, .journey-step, .seo-card, .seo-checklist");
-    document.documentElement.classList.add("js-reveal");
-
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          var el = entry.target;
-          el.classList.add("is-visible");
-          io.unobserve(el);
-          setTimeout(function () {
-            el.classList.remove("reveal-on", "is-visible");
-            el.style.transitionDelay = "";
-          }, 1000);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
-
-    targets.forEach(function (el, i) {
-      el.classList.add("reveal-on");
-      el.style.transitionDelay = ((i % 3) * 80) + "ms";
-      io.observe(el);
-    });
-  })();
-  </script>
+  <script src="/site.js" defer></script>
   <script src="/script.js" defer></script>
 </body>
 </html>

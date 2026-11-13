@@ -2,11 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://vetracrm.in/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://vetracrm.in/cloud-crm/</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://vetracrm.in/self-hosted-crm/</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://vetracrm.in/features/</loc>
+    <lastmod>2026-11-14</lastmod>
   </url>
   <url>
     <loc>https://vetracrm.in/blog/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-14</lastmod>
   </url>
   <url>
     <loc>https://vetracrm.in/blog/indiamart-lead-management.html</loc>
@@ -23,5 +35,89 @@
   <url>
     <loc>https://vetracrm.in/privacy.html</loc>
     <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://vetracrm.in/blog/what-is-crm.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://vetracrm.in/blog/best-crm-software-india.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://vetracrm.in/blog/crm-software-price-india.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://vetracrm.in/blog/cloud-vs-self-hosted-crm.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://vetracrm.in/blog/whatsapp-crm.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://vetracrm.in/blog/ai-whatsapp-agent.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://vetracrm.in/blog/whatsapp-marketing-crm.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://vetracrm.in/blog/indiamart-crm-integration.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://vetracrm.in/blog/facebook-lead-ads-crm.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://vetracrm.in/blog/google-ads-lead-form-crm.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://vetracrm.in/blog/lead-management-system.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://vetracrm.in/blog/round-robin-lead-assignment.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://vetracrm.in/blog/crm-for-sales-team.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://vetracrm.in/blog/quotation-software-with-payment-link.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://vetracrm.in/blog/gst-invoice-crm.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://vetracrm.in/blog/crm-for-manufacturers.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://vetracrm.in/blog/crm-for-distributors-wholesalers.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://vetracrm.in/blog/crm-for-ecommerce-business.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://vetracrm.in/blog/email-open-tracking-crm.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://vetracrm.in/blog/excel-to-crm.html</loc>
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://vetracrm.in/blog/crm-roles-permissions-audit-logs.html</loc>
+    <lastmod>2026-11-14</lastmod>
   </url>
 </urlset>

@@ -27,13 +27,13 @@ function createSourceLeadId() {
   return `vetracrm-website-${uniquePart}`;
 }
 const offerDialog = document.createElement('dialog');
-offerDialog.className = 'diwali-offer-dialog';
-offerDialog.setAttribute('aria-labelledby', 'diwali-offer-title');
+offerDialog.className = 'offer-dialog';
+offerDialog.setAttribute('aria-labelledby', 'offer-title');
 offerDialog.innerHTML = `
   <button class="offer-close" type="button" aria-label="Close offer form">×</button>
-  <div class="offer-kicker"><span aria-hidden="true">✦</span> DIWALI SPECIAL <b>20% OFF</b></div>
-  <h2 id="diwali-offer-title">Get your Vetra CRM offer</h2>
-  <p class="offer-intro">Get 20% off the Vetra CRM monthly subscription and one-time setup. Share your details and our team will confirm offer validity and the discounted quote.</p>
+  <div class="offer-kicker"><span aria-hidden="true">✦</span> CHRISTMAS OFFER <b>20% OFF</b></div>
+  <h2 id="offer-title">Get your Vetra CRM offer</h2>
+  <p class="offer-intro">Get 20% off Vetra Cloud plans and one-time setup, valid till 25 December 2026. Plans start at ₹1,599/month with the offer. Share your details and our team will send your discounted quote.</p>
   <form class="contact-form offer-form" name="offer-enquiry" method="POST">
     <p class="hidden-field"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
     <div class="form-grid">
@@ -44,7 +44,7 @@ offerDialog.innerHTML = `
       <label>City <span class="optional">Optional</span><input name="city" autocomplete="address-level2" placeholder="Your city"></label>
       <label>State / region <span class="optional">Optional</span><input name="state" autocomplete="address-level1" placeholder="Your state"></label>
       <label>Business type <em>*</em><select required name="business_type"><option value="" disabled selected>Select your business type</option><option>IndiaMART seller</option><option>Manufacturer or supplier</option><option>Wholesaler or distributor</option><option>B2B trading or export</option><option>Professional or service business</option><option>Consulting or agency</option><option>E-commerce</option><option>Retail or trading</option><option>Other</option></select></label>
-      <label>Interested in <select name="interest"><option selected>Diwali offer (20% off subscription + setup)</option><option>Monthly CRM subscription</option><option>One-time setup and onboarding</option><option>Both</option><option>Not sure yet</option></select></label>
+      <label>Interested in <select name="interest"><option selected>Christmas offer (20% off subscription + setup)</option><option>Cloud CRM: Starter plan</option><option>Cloud CRM: Growth plan</option><option>Cloud CRM: Pro plan</option><option>Self-hosted CRM (on my own server)</option><option>Not sure yet, help me choose</option></select></label>
       <label class="form-full">What would you like help with? <span class="optional">Optional</span><textarea name="message" rows="2" placeholder="Tell us what your team needs…"></textarea></label>
     </div>
     <div class="form-bottom"><p>By submitting, you agree we may contact you about Vetra CRM. See our <a href="/privacy.html">privacy notice</a>.</p><button class="btn btn-primary" type="submit">Get 20% offer <span>↗</span></button></div>
@@ -54,12 +54,12 @@ offerDialog.innerHTML = `
 document.body.append(offerDialog);
 
 const contactForms = [...document.querySelectorAll('.contact-form')];
-const claimOfferFromUrl = new URLSearchParams(window.location.search).get('offer') === 'diwali20';
+const claimOfferFromUrl = new URLSearchParams(window.location.search).get('offer') === 'xmas20';
 
 contactForms.forEach((contactForm) => {
   const contactStatus = contactForm.querySelector('.form-status');
   const interestSelect = contactForm.querySelector('[name="interest"]');
-  if (claimOfferFromUrl && interestSelect) interestSelect.value = 'Diwali offer (20% off subscription + setup)';
+  if (claimOfferFromUrl && interestSelect) interestSelect.value = 'Christmas offer (20% off subscription + setup)';
 
   contactForm.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -180,7 +180,9 @@ try {
   // If storage is unavailable, still keep the popup limited to the homepage load.
 }
 
-if (isLandingPage && !offerSeenThisSession) {
+// Offer ends after 25 December 2026 (IST); after that the popup stops showing.
+const offerActive = Date.now() < Date.parse('2026-12-26T00:00:00+05:30');
+if (offerActive && isLandingPage && !offerSeenThisSession) {
   offerDialog.showModal();
   try {
     sessionStorage.setItem(offerSeenKey, 'true');

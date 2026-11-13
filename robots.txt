@@ -1,4 +1,15 @@
+# Vetra CRM crawl rules
+# Sab public pages, CSS, JS, images aur videos crawl ho sakte hain.
 User-agent: *
 Allow: /
- 
+
+# Internal files jo search me nahi aane chahiye
+Disallow: /google-apps-script/
+Disallow: /assets/README.md
+
+# Ads/offer tracking wale duplicate URLs (asli page canonical se index hota hai)
+Disallow: /*?utm_
+Disallow: /*&utm_
+Disallow: /*?offer=
+
 Sitemap: https://vetracrm.in/sitemap.xml
