@@ -1,0 +1,52 @@
+<!--
+{
+  "title": "Offline-First Software: Keep Working When the Internet Fails",
+  "description": "What offline-first software is, how local storage and cloud sync work, how conflicts are handled, and why it suits billing counters, clinics and field teams.",
+  "h1": "Offline-first software: keep working when the internet fails",
+  "dek": "In many parts of India, internet drops are routine. Offline-first software means work never stops because of them.",
+  "category": "desktop-apps",
+  "date": "2026-11-22",
+  "keywords": "offline first software, offline billing, sync software",
+  "faqs": [
+    ["What happens if two people edit the same record offline?", "Offline-first systems use conflict rules, for example last change wins for simple fields, or flagging conflicts for review on important records. These rules are designed when the software is planned."],
+    ["Is offline data safe?", "Local data can be protected with user logins, encryption and regular sync to cloud backups, so a lost or failed computer does not mean lost data."]
+  ]
+}
+-->
+<p>Offline-first software is designed to work fully without internet, and to sync data with a central server whenever a connection is available. Users barely notice when the internet drops.</p>
+
+<h2>How it works</h2>
+<ol>
+  <li><strong>Local database:</strong> every action is saved instantly on the device.</li>
+  <li><strong>Sync queue:</strong> changes wait in a queue while offline.</li>
+  <li><strong>Background sync:</strong> when online, changes upload and updates from other devices download.</li>
+  <li><strong>Conflict handling:</strong> rules decide what happens if the same record changed in two places.</li>
+</ol>
+
+<h2>Where it matters most</h2>
+<ul>
+  <li>Billing counters that cannot stop during a rush</li>
+  <li>Clinics, labs and pharmacies</li>
+  <li>Factories, warehouses and weighbridges</li>
+  <li>Field sales and service teams in low-signal areas (see <a href="/blog/field-sales-order-app.html">field sales apps</a>)</li>
+</ul>
+
+<h2>Benefits</h2>
+<ul>
+  <li>No lost sales or work during outages</li>
+  <li>Faster screens, because data is local</li>
+  <li>Cloud backups and reports once synced</li>
+  <li>Multiple branches working on shared data</li>
+</ul>
+
+<h2>Design questions to settle early</h2>
+<ul>
+  <li>Which data must be on each device, and which can stay in the cloud?</li>
+  <li>How are invoice numbers kept unique across offline devices?</li>
+  <li>What happens to stock if two branches sell the last unit offline?</li>
+  <li>How are conflicts shown to users?</li>
+</ul>
+
+<div class="article-callout"><b>Invoice numbering tip</b><p>A common approach is a device or branch prefix in each invoice number, so offline devices can never create duplicates.</p></div>
+
+<p>Our <a href="/desktop-app-development/">desktop app team</a> builds offline-first software for Windows and Mac. Related: <a href="/blog/desktop-vs-web-application.html">desktop vs web applications</a>.</p>

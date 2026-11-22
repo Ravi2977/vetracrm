@@ -6,6 +6,7 @@ Allow: /
 # Internal files jo search me nahi aane chahiye
 Disallow: /google-apps-script/
 Disallow: /assets/README.md
+Disallow: /src/
 
 # Ads/offer tracking wale duplicate URLs (asli page canonical se index hota hai)
 Disallow: /*?utm_

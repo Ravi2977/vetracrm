@@ -1,0 +1,47 @@
+<!--
+{
+  "title": "SSL Certificate Expired? What Happens and How to Prevent It",
+  "description": "What happens when your website's SSL certificate expires, how to fix it quickly, and how to prevent it with auto-renewal and monitoring as lifetimes get shorter.",
+  "h1": "SSL certificate expired? What happens and how to prevent it",
+  "dek": "An expired certificate turns your website into a scary browser warning. It is easy to prevent, and more important than ever as certificate lifetimes shrink.",
+  "category": "maintenance",
+  "date": "2026-11-22",
+  "keywords": "SSL certificate expired, SSL renewal, HTTPS certificate",
+  "faqs": [
+    ["How do I check when my SSL certificate expires?", "Click the padlock icon in your browser's address bar and view the certificate details, or use an online SSL checker or monitoring tool that alerts you before expiry."],
+    ["Are free SSL certificates safe?", "Yes. Free certificates from widely trusted authorities such as Let's Encrypt provide the same encryption as paid ones. The key is reliable automatic renewal."]
+  ]
+}
+-->
+<p>An SSL/TLS certificate lets browsers connect to your website securely over HTTPS. When it expires, visitors see a full-page security warning, and most of them leave.</p>
+
+<h2>What happens when it expires</h2>
+<ul>
+  <li>Browsers show a "Your connection is not private" warning</li>
+  <li>Visitors, enquiries and sales drop immediately</li>
+  <li>Apps and integrations that call your site may fail</li>
+  <li>Customers lose trust</li>
+</ul>
+
+<h2>How to fix it quickly</h2>
+<ol>
+  <li>Log in to your hosting panel or server</li>
+  <li>Renew or reissue the certificate (many hosts offer one-click free certificates)</li>
+  <li>Install it and restart the web server if needed</li>
+  <li>Check the site in a private browser window</li>
+</ol>
+
+<h2>Why this matters more now</h2>
+<p>Maximum certificate lifetimes are being reduced in stages under browser industry rules: down to about 200 days from March 2026, with further reductions planned over the next few years. Manual renewal once a year no longer works; automation is essential.</p>
+
+<h2>How to prevent it</h2>
+<ul>
+  <li><strong>Automate renewal</strong> using your host's built-in SSL or an ACME client</li>
+  <li><strong>Monitor expiry</strong> with alerts several weeks in advance</li>
+  <li><strong>Keep DNS and domain current</strong>, because renewal often depends on them</li>
+  <li><strong>Document where certificates are used</strong>: website, API, mail server, subdomains</li>
+</ul>
+
+<div class="article-callout"><b>Don't forget subdomains</b><p>Certificates for subdomains such as crm.yourcompany.com or api.yourcompany.com can be separate from the main site, and are often forgotten.</p></div>
+
+<p>Our <a href="/maintenance-support/">support plans</a> manage domains, DNS and SSL renewals with monitoring. Related: <a href="/blog/website-maintenance-checklist.html">website maintenance checklist</a>.</p>
