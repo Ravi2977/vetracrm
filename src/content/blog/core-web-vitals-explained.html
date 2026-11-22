@@ -1,0 +1,55 @@
+<!--
+{
+  "title": "Core Web Vitals Explained: LCP, INP and CLS in Plain English",
+  "description": "Core Web Vitals explained simply: what LCP, INP and CLS measure, the good thresholds, why they matter for SEO and users, and how to improve each one.",
+  "h1": "Core Web Vitals explained: LCP, INP and CLS in plain English",
+  "dek": "Google measures how fast your page loads, how quickly it responds and whether it jumps around. Here's what that means and how to fix it.",
+  "category": "website",
+  "date": "2026-11-22",
+  "keywords": "Core Web Vitals, LCP INP CLS, website speed, layout shift",
+  "faqs": [
+    ["What are good Core Web Vitals scores?", "Google's 'good' thresholds are LCP of 2.5 seconds or less, INP of 200 milliseconds or less, and CLS of 0.1 or less, measured at the 75th percentile of page visits."],
+    ["Where can I check my Core Web Vitals?", "You can check them in Google Search Console, PageSpeed Insights and Chrome's developer tools."]
+  ]
+}
+-->
+<p>Core Web Vitals are three measurements Google uses to judge the experience of loading and using a web page. They matter for users first, and they are also part of how Google evaluates page experience.</p>
+
+<h2>LCP: Largest Contentful Paint</h2>
+<p><strong>What it measures:</strong> how long it takes for the main content (usually the hero image or headline) to appear.</p>
+<p><strong>Good:</strong> 2.5 seconds or less.</p>
+<p><strong>How to improve:</strong></p>
+<ul>
+  <li>Compress and correctly size images; use modern formats</li>
+  <li>Use fast hosting and a CDN</li>
+  <li>Avoid large scripts that block the page from showing</li>
+  <li>Preload the most important image or font</li>
+</ul>
+
+<h2>INP: Interaction to Next Paint</h2>
+<p><strong>What it measures:</strong> how quickly the page responds when someone taps or clicks. It replaced First Input Delay (FID) in 2024.</p>
+<p><strong>Good:</strong> 200 milliseconds or less.</p>
+<p><strong>How to improve:</strong></p>
+<ul>
+  <li>Reduce heavy JavaScript and third-party scripts</li>
+  <li>Break long tasks into smaller pieces</li>
+  <li>Avoid unnecessary plugins and trackers</li>
+</ul>
+
+<h2>CLS: Cumulative Layout Shift</h2>
+<p><strong>What it measures:</strong> how much the page jumps around while loading. You have felt this when you try to tap a button and it moves because an image or banner loaded above it.</p>
+<p><strong>Good:</strong> 0.1 or less.</p>
+<p><strong>How to improve:</strong></p>
+<ul>
+  <li>Always set width and height (or aspect ratio) on images and videos</li>
+  <li>Reserve space for banners, ads and embeds</li>
+  <li>Avoid inserting content above existing content after load</li>
+  <li>Load web fonts so the text does not reflow (for example, matching fallback font metrics)</li>
+</ul>
+
+<div class="article-callout"><b>Example from our own site</b><p>We build pages with fixed image sizes, preloaded fonts with matched fallbacks, and content that is visible from the first paint. Our own pages measure a CLS of 0 in testing.</p></div>
+
+<h2>How to check your site</h2>
+<p>Use PageSpeed Insights for a quick report, and Google Search Console's Core Web Vitals report to see real-user data across your site.</p>
+
+<p>Need a faster site? Talk to our <a href="/website-development/">website development team</a>. Related: <a href="/blog/seo-for-small-business-website.html">SEO for small business websites</a>.</p>

@@ -1,0 +1,1011 @@
+{
+ "billing-counter-hardware": {
+  "id": "20395f0d-16c0-4d2c-81e2-54936ed1675e",
+  "title": "Arduino hooked up to receipt printer",
+  "creator": "dmje",
+  "creator_url": "https://www.flickr.com/photos/48411273@N00",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/48411273@N00/3366961647",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "attribution_required": true,
+  "query": "receipt printer",
+  "rejected": [
+   "7f81b75b-37a2-47e5-9481-a9483bf7c2b0"
+  ]
+ },
+ "billing-software-for-retail-shop": {
+  "id": "ec3b3949-e3ba-4abd-9722-04cadc710dd2",
+  "title": "checkout counter at wine store",
+  "creator": "Consumerist Dot Com",
+  "creator_url": "https://www.flickr.com/photos/21241181@N00",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/21241181@N00/438924109",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "attribution_required": true,
+  "query": "checkout counter",
+  "rejected": [
+   "0012807d-8aa8-4db0-926b-a4c1df8a0eb3",
+   "4c584f20-b3d5-44b2-bc61-3d4d7a796831",
+   "62233c7b-f958-4cda-a942-eac5becd9792",
+   "8e28abcb-e672-40c7-bc79-049a007c1b49"
+  ]
+ },
+ "clinic-management-software": {
+  "id": "219edb07-eec1-49c9-92b4-0fe6b719e240",
+  "title": "Week #35/52",
+  "creator": "Connor Tarter",
+  "creator_url": "https://www.flickr.com/photos/27446438@N07",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/27446438@N07/5364252374",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "attribution_required": true,
+  "query": "stethoscope desk",
+  "rejected": [
+   "788604a7-c39c-45f7-8937-1a9f9da278b8",
+   "7996fa66-1a65-4c1e-9f58-6699026a1029"
+  ]
+ },
+ "cloud-vs-self-hosted-crm": {
+  "id": "ec04daa6-5e20-488e-bde2-78302c8836e1",
+  "title": "A messy network server room showing wires, patch panels in a room",
+  "creator": "Moses Cursor Ssebunya",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/64767dd6fa/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "server room",
+  "rejected": []
+ },
+ "core-web-vitals-explained": {
+  "id": "80bf4c13-274a-4351-ba98-197a00afe9ce",
+  "title": "Rubik’s Cube with code background",
+  "creator": "Tahmid ul Karim",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/97462b043a/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "code screen",
+  "rejected": []
+ },
+ "crm-for-distributors-wholesalers": {
+  "id": "fad72149-a31f-4eab-9c88-eed0f6c69cd2",
+  "title": "Warehousing environment storing, picking and packaging.",
+  "creator": "allureconsulting",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/3466439c6e/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "warehouse boxes",
+  "rejected": []
+ },
+ "crm-for-manufacturers": {
+  "id": "9d292795-23e6-4b68-b2a6-9f3bc095c07d",
+  "title": "A tile factory on the banks of Chaliyar river in Feroke, Kerala, with its distinctive tall chimney. The factory buildings, characterized by their red-tiled roofs, are partially obscured by lush green trees and vegetation. The chimney, made of red brick, stands prominently against a backdrop of a cloudy sky.",
+  "creator": "Bigul Malayi",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/68667d1c3e/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "factory",
+  "rejected": []
+ },
+ "crm-roles-permissions-audit-logs": {
+  "id": "0a8c4312-3864-463e-bb2d-93f252126f29",
+  "title": "Collection of Security Locks",
+  "creator": "Jennifer Bourn",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/729637b054/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "security lock",
+  "rejected": []
+ },
+ "desktop-app-technology-choice": {
+  "id": "df211c89-aef3-4cf7-94df-2a97b9498d16",
+  "title": "Web development: Code on screen, candles, home plant—a cozy and productive workspace ambiance.",
+  "creator": "Upen Singh",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/61365be1f7/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "developer coding",
+  "rejected": []
+ },
+ "desktop-vs-cloud-billing-software": {
+  "id": "87a3faed-efbb-47cb-99b0-8dfd51fa47d0",
+  "title": "An open desktop computer case showing internal components, including a motherboard, power supply, cables, and a cooling fan.",
+  "creator": "Moses Cursor Ssebunya",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/35667c22e6/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "desktop computer",
+  "rejected": []
+ },
+ "developer-left-take-over-website": {
+  "id": "a9d400a5-aa9a-4669-9181-d65b597827f3",
+  "title": "Programmer Dream Setup",
+  "creator": "Web Bird",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/64865588c7/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "laptop programmer",
+  "rejected": []
+ },
+ "erp-for-small-business-india": {
+  "id": "e9ec76f8-2c72-46ce-88e2-92cec644a1da",
+  "title": "Dr. Pepper Bottling machine",
+  "creator": "Topher",
+  "creator_url": "https://topher.how",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/49061faa43/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution_required": false,
+  "query": "factory machine",
+  "rejected": [
+   "1cc9087f-fc82-432a-b9f0-4cc3bacd741e",
+   "8d0bf360-c27a-4c3b-a0f8-467a606c6aa8"
+  ]
+ },
+ "field-sales-order-app": {
+  "id": "522bdf01-f972-4b7b-8f7b-9f8224797418",
+  "title": "A person holding a stylus over a tablet screen, with the tablet resting on a case. The person is wearing a light-colored, ribbed long-sleeve shirt, and the background is dark.",
+  "creator": "Nilo Velez",
+  "creator_url": "https://www.nilovelez.com",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/447677c56a/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution_required": false,
+  "query": "tablet hand",
+  "rejected": [
+   "34916bd4-b5cb-4b35-95c6-e2d8df5db5b6"
+  ]
+ },
+ "flutter-vs-react-native-vs-native": {
+  "id": "1f2cf2b9-ea7d-48dc-84fd-6e0e1c7981bd",
+  "title": "Preferred platforms of Belgian mobile app developers",
+  "creator": "thomasbonte",
+  "creator_url": "https://www.flickr.com/photos/43489439@N00",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/43489439@N00/8022462971",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "attribution_required": true,
+  "query": "mobile app development",
+  "rejected": [
+   "6edbdd58-2c5a-4a1d-9a48-5f4bc51d5369"
+  ]
+ },
+ "gst-invoice-format": {
+  "id": "2a1bc3ce-83b3-4064-b6d4-8ac505582a3f",
+  "title": "A used Gosport Ferry ticket",
+  "creator": "redIT",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/83162fe473/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "receipt paper",
+  "rejected": []
+ },
+ "hospital-management-system-modules": {
+  "id": "be786fcb-c9a9-464b-ac75-66cff6dab7db",
+  "title": "An old hospital building at midnight",
+  "creator": "Abir",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/26364a537f/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "hospital",
+  "rejected": []
+ },
+ "inventory-management-electronics-shop": {
+  "id": "d889fa94-54e9-41c6-a6d0-52034afb068f",
+  "title": "A close-up image of a green printed circuit board featuring various electronic components, including capacitors, resistors, and connectors. Some of the components are labeled with values. In the background, there are blurred out tools and screws, suggesting a workspace environment focused on electronics repair or assembly.",
+  "creator": "Moses Cursor Ssebunya",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/430689b35a/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "electronics",
+  "rejected": []
+ },
+ "ipd-billing-process": {
+  "id": "44ec5360-e5c2-4608-8ca0-1e5c6b1c72f8",
+  "title": "Hospital bed, made and unused. Flowers on a stand next to tge bed, medical equipment on the wall put away.",
+  "creator": "sreejagroups",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/8266470866/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "hospital bed",
+  "rejected": []
+ },
+ "medical-store-billing-process": {
+  "id": "31436a6c-5389-4b6c-a23b-f58a755d0318",
+  "title": "Two open hands are shown, each holding a pill. The left hand holds a blue capsule, while the right hand holds a red capsule. The background is softly blurred, emphasizing the contrasting colors of the pills against the skin of the hands.",
+  "creator": "Nilo Velez",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/13269d6741/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "pills",
+  "rejected": []
+ },
+ "medical-store-software-features": {
+  "id": "25905292-7594-490e-842f-9e955cdc8060",
+  "title": "The caps of two medicine bottles on a desk.",
+  "creator": "Topher",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/9968683157/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "pills medicine",
+  "rejected": []
+ },
+ "pharma-wholesale-distributor-software": {
+  "id": "2fabb256-8a3d-4e8b-ab3d-e293adda827b",
+  "title": "Old Pharmacy Shelves",
+  "creator": "berniedup",
+  "creator_url": "https://www.flickr.com/photos/65695019@N07",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/65695019@N07/32190639097",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "attribution_required": true,
+  "query": "pharmacy shelves",
+  "rejected": [
+   "3ed708ad-7219-4010-8d07-63edf21b86fc",
+   "be6faa3d-8e1d-448c-b1ca-14f0dd3a4bd4",
+   "f0a35acc-f850-487d-9c64-dcba364abffc"
+  ]
+ },
+ "pharmacy-inventory-management": {
+  "id": "0f8bfa0d-b1a4-4335-b423-b0385a9aadab",
+  "title": "Plague doctor getting new resources at the pharmacy",
+  "creator": "Topher",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/9756324ad1/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "pharmacy",
+  "rejected": []
+ },
+ "reduce-dead-stock": {
+  "id": "2cb4c5a9-f1c2-4b18-9e44-8216f76683a0",
+  "title": "Warehousing environment storing, picking and packaging.",
+  "creator": "allureconsulting",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/6936439c80/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "boxes warehouse",
+  "rejected": []
+ },
+ "reorder-level-formula": {
+  "id": "a77ceca5-d5d3-4e1e-9914-23081edea6eb",
+  "title": "Warehousing environment storing, picking and packaging. Towering shelves on the left, brick wall on the right. Lots of industrial desk space.",
+  "creator": "allureconsulting",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/2246439c68/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "shelves store",
+  "rejected": []
+ },
+ "upgrade-legacy-software": {
+  "id": "4bd0a6df-5060-4454-9db3-6f4b07705005",
+  "title": "A technician cleaning an old computer by dusting with a blower",
+  "creator": "Moses Cursor Ssebunya",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/17567dd65b/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "old computer",
+  "rejected": []
+ },
+ "website-development-cost-india": {
+  "id": "02fe7e3e-dde1-4e7b-b083-afa01f7bc929",
+  "title": "Minimalist workspace with a large screen, tripods, web design graphics, and pendant lights.",
+  "creator": "Rashed Hossain",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/6369c7ef5a/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "web design",
+  "rejected": []
+ },
+ "ai-whatsapp-agent": {
+  "id": "8dfc447a-944f-49a4-9a58-a43b1ad0ac72",
+  "title": "Hand holding a phone in a recording angle",
+  "creator": "Moses Cursor Ssebunya",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/28468b5f3b/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "smartphone hand",
+  "rejected": []
+ },
+ "desktop-vs-web-application": {
+  "id": "559d62e6-a04c-4d73-9409-87a25dbab35f",
+  "title": "A vintage ship communication setup with a CRT monitor, keyboard, and printer, along with printed instructions, likely for maritime navigation and communication.",
+  "creator": "Javier Casares",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/988654cfd7/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "computer desk",
+  "rejected": []
+ },
+ "imei-serial-number-tracking": {
+  "id": "a8200dda-da8b-4678-8b99-4efb5e36f57c",
+  "title": "Two smartphones stacked on a beige outdoor chair cushion next to a stone-tiled floor.",
+  "creator": "Alina Kakshapati",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/7746a197ba/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "smartphones",
+  "rejected": []
+ },
+ "offline-first-software": {
+  "id": "72948368-3b27-423e-8fe7-6e94dbe5003d",
+  "title": "A laptop displaying code is placed on a woven outdoor table, with a mug of coffee beside it. The background features a clear blue sky and mountain landscape visible from a balcony with decorative railing elements.",
+  "creator": "Virendra Kumar Yadav",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/2867a10c66/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "laptop coffee",
+  "rejected": []
+ },
+ "publish-app-play-store-app-store": {
+  "id": "98cbe365-a3ac-4daf-8e9b-52516ef43fe7",
+  "title": "Two iphones and two external batteries with Wapuu stickers on them.",
+  "creator": "Hameem Mahdad Kader",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/4486468680/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "iphone",
+  "rejected": []
+ },
+ "software-requirements-document": {
+  "id": "d58d11e1-1863-461c-9511-3c0b2087b965",
+  "title": "writing text, random text, text, paper, notebook, pen.",
+  "creator": "David Chandra Purnama",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/632620a981/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "query": "notebook writing",
+  "rejected": []
+ },
+ "b2b-sales-pipeline-india": {
+  "id": "670fc03d-5d76-40c2-ba8f-9a90f052af07",
+  "title": "DECplate Flow Chart Template",
+  "creator": "mrbill",
+  "creator_url": "https://www.flickr.com/photos/41894183508@N01",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/41894183508@N01/3267227227",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "attribution_required": true,
+  "query": "laptop chart",
+  "rejected": [
+   "03639651-ca2f-4922-b1f7-db8c3169d0e7",
+   "132e018f-0c0f-4e34-8739-778726e7fecd"
+  ]
+ },
+ "best-billing-software-india": {
+  "id": "78c04359-4d49-4677-8733-ed5c8034b596",
+  "title": "Creaky old cash register",
+  "creator": "insouciance",
+  "creator_url": "https://www.flickr.com/photos/66901607@N00",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/66901607@N00/4538886934",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "attribution_required": true,
+  "query": "cash register",
+  "rejected": [
+   "581d7c34-d34d-458d-84cb-646505f02946"
+  ]
+ },
+ "best-crm-software-india": {
+  "id": "d76b4039-e148-4494-ae49-c2c33a189267",
+  "title": "A work desk in a city office with a macbook air and a headset hanging over the screen.",
+  "creator": "azharckra",
+  "creator_url": "https://wordpress.org/photos/author/azharckra/",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/9866496563/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution_required": false,
+  "query": "laptop office work",
+  "rejected": [
+   "d94e5e38-7d3a-4566-9cd4-5716c593855d"
+  ]
+ },
+ "business-website-must-have-pages": {
+  "id": "0cf000f5-0dac-42c3-a935-cd200477b90a",
+  "title": "A person with curly hair is silhouetted against a large computer screen, pointing at a section of a webpage. The screen displays a website in Spanish, featuring the WordPress logo and navigation menu, with a red arrow pointing to the “Colabora” menu item.",
+  "creator": "Nilo Velez",
+  "creator_url": "https://www.nilovelez.com",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/617678ba0a/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution_required": false,
+  "query": "website",
+  "rejected": []
+ },
+ "choose-hospital-management-software": {
+  "id": "0ec9d4f0-ee00-435a-9f52-246890937f89",
+  "title": "Stethoscope and piggy Bank",
+  "creator": "401(K) 2013",
+  "creator_url": "https://www.flickr.com/photos/68751915@N05",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/68751915@N05/6793819699",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "attribution_required": true,
+  "query": "stethoscope",
+  "rejected": [
+   "88e154ab-4553-4372-ac9e-973b0e887170",
+   "9a5d27b9-d45e-4c93-a10a-137cd69a8514"
+  ]
+ },
+ "crm-for-ecommerce-business": {
+  "id": "812a7d07-7355-4dcd-93cf-0406358c8bfb",
+  "title": "Online shopping",
+  "creator": "Robbert Noordzij",
+  "creator_url": "https://www.flickr.com/photos/30760216@N08",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/30760216@N08/22257890101",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "attribution_required": true,
+  "query": "online shopping laptop",
+  "rejected": [
+   "8ec72c56-a553-4cd3-8432-63c5e00f58db"
+  ]
+ },
+ "crm-for-sales-team": {
+  "id": "d8dc19f0-b6b6-4b0a-9c24-daf1778c1fdc",
+  "title": "Learning with iPads",
+  "creator": "mikecogh",
+  "creator_url": "https://www.flickr.com/photos/89165847@N00",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/89165847@N00/7691519996",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "attribution_required": true,
+  "query": "laptops table meeting",
+  "rejected": [
+   "5a30d0ba-2445-4a01-ba48-6460bb6c763a",
+   "8921cb3f-3670-4c3b-82bb-2bd108412b67"
+  ]
+ },
+ "crm-software-price-india": {
+  "id": "a212f9c8-21e4-4ef0-8cf4-3e7f150006ca",
+  "title": "Closeup of ON button from a Hewlett-Packard financial calculator",
+  "creator": "asternecky",
+  "creator_url": "https://adamsternecky.wordpress.com",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/4186392099/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution_required": false,
+  "query": "calculator",
+  "rejected": []
+ },
+ "custom-software-development-cost": {
+  "id": "7efa211a-9e20-4876-b6f8-a0d60e9874a0",
+  "title": "Calculator",
+  "creator": "Images_of_Money",
+  "creator_url": "https://www.flickr.com/photos/59937401@N07",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/59937401@N07/5856725357",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "attribution_required": true,
+  "query": "budget calculator",
+  "rejected": [
+   "7582ed1f-1e88-405a-a2f2-1cd7b4477687"
+  ]
+ },
+ "custom-software-vs-off-the-shelf": {
+  "id": "20e3f039-4494-4012-a7ed-aadf518050fc",
+  "title": "Conference room with whiteboard",
+  "creator": "渡邉厚夫(たいちょ渡邉)",
+  "creator_url": "https://tech.oms99.jp",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/1536566d31/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution_required": false,
+  "query": "whiteboard",
+  "rejected": []
+ },
+ "does-my-business-need-an-app": {
+  "id": "f25d359e-e57c-4241-953a-3b196201e5a7",
+  "title": "iPhone 5 - Home Screen",
+  "creator": "William Hook",
+  "creator_url": "https://www.flickr.com/photos/83542829@N00",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/83542829@N00/8009498197",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "attribution_required": true,
+  "query": "smartphone home screen",
+  "rejected": [
+   "93a84c5f-6ed7-4c89-8026-9353b8356c6a",
+   "bb8c36e0-ad82-47f8-a77b-fe2a836e2a07"
+  ]
+ },
+ "email-open-tracking-crm": {
+  "id": "5c1ebdd7-6b16-48eb-b94a-c16329bd0b37",
+  "title": "eMail",
+  "creator": "Esparta",
+  "creator_url": "https://www.flickr.com/photos/66208256@N00",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/66208256@N00/1609874001",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "attribution_required": true,
+  "query": "email inbox",
+  "rejected": [
+   "c248a1cd-85aa-4f06-bec1-bbca960f7577"
+  ]
+ },
+ "excel-to-crm": {
+  "id": "27a50409-389d-4503-a869-561f54d4a140",
+  "title": "Anti-ray glass with a laptop and an external keyboard.",
+  "creator": "binitagothe",
+  "creator_url": "https://wordpress.org/photos/author/binitagothe/",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/77465c349e/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution_required": false,
+  "query": "laptop",
+  "rejected": []
+ },
+ "facebook-lead-ads-crm": {
+  "id": "3863c126-8d16-4403-9884-62906f3bd6f4",
+  "title": "facebook-smartphones-privacy-permissions",
+  "creator": "AngsCopy",
+  "creator_url": "https://www.flickr.com/photos/33140218@N02",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/33140218@N02/8643165097",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "attribution_required": true,
+  "query": "facebook smartphone",
+  "rejected": [
+   "f589cf9e-1ac7-4094-95d5-b61836c40abe"
+  ]
+ },
+ "google-ads-lead-form-crm": {
+  "id": "57b0d39f-6756-4fe6-a889-9131beec32d8",
+  "title": "Evernote",
+  "creator": "Johan Larsson",
+  "creator_url": "https://www.flickr.com/photos/38305415@N00",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/38305415@N00/4375773612",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "attribution_required": true,
+  "query": "google search laptop",
+  "rejected": [
+   "aab694fa-6d3c-4137-90d7-75e53b5564cc"
+  ]
+ },
+ "gst-invoice-crm": {
+  "id": "e5a33bf0-316d-402c-b080-09fb4e1c4a31",
+  "title": "Person holding a smartphone with a blue bubble-popper-style case, in an office with a monitor, keyboard, and paperwork in the background.",
+  "creator": "Moses Cursor Ssebunya",
+  "creator_url": "https://mosescursor.com",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/207689af51/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution_required": false,
+  "query": "paperwork",
+  "rejected": []
+ },
+ "home-sample-collection-management": {
+  "id": "4c7fb23b-c180-4887-aabd-b8d6d2207c94",
+  "title": "Taking blood in full Personal Protective Equipment (PPE)",
+  "creator": "DFID - UK Department for International Development",
+  "creator_url": "https://www.flickr.com/photos/14214150@N02",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/14214150@N02/15836441352",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "attribution_required": true,
+  "query": "blood sample nurse",
+  "rejected": [
+   "32f2ca75-59f2-45be-93ce-c40650d1c49a"
+  ]
+ },
+ "indiamart-crm-integration": {
+  "id": "781b9dff-642f-4014-8120-7eca3abf6bf6",
+  "title": "Corporate Handshake. A woman shaking a man’s hand.",
+  "creator": "kylerunner",
+  "creator_url": "https://www.kylerunner.com",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/70963db0eb/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution_required": false,
+  "query": "handshake",
+  "rejected": []
+ },
+ "indiamart-lead-management": {
+  "id": "e0829310-d62b-4c76-b2c1-7e4e89c668de",
+  "title": "Day 56 - On the Phone",
+  "creator": "DaGoaty",
+  "creator_url": "https://www.flickr.com/photos/58169987@N00",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/58169987@N00/4395951963",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "attribution_required": true,
+  "query": "phone call business",
+  "rejected": [
+   "6ceaf237-3ff6-46b5-9030-b9bc3f0ab65b"
+  ]
+ },
+ "lab-report-format": {
+  "id": "261b4546-4903-4032-b064-68494e8a2499",
+  "title": "Microscope + DSi",
+  "creator": "scanlime",
+  "creator_url": "https://www.flickr.com/photos/22238428@N05",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/22238428@N05/3866958682",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "attribution_required": true,
+  "query": "microscope",
+  "rejected": []
+ },
+ "lab-sample-tracking-barcode": {
+  "id": "35077f07-6e02-4caf-a6bf-d83961b00889",
+  "title": "A positive corona/COVID test",
+  "creator": "Rámon van Raaij",
+  "creator_url": "https://ramon.vanraaij.eu",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/87662e9213/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution_required": false,
+  "query": "test",
+  "rejected": []
+ },
+ "lead-management-system": {
+  "id": "5fe45e37-8d84-4be5-8807-cd534266be33",
+  "title": "A colorful assortment of stationery items scattered on a white surface, including pencils, pens, paperclips, pushpins, erasers, rulers, a compass, a pencil sharpener, sticky notes, and a utility knife.",
+  "creator": "onikart",
+  "creator_url": "https://onikartusan.wordpress.com",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/57467d1217/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution_required": false,
+  "query": "sticky notes",
+  "rejected": [
+   "6cdfdd40-ff21-41f6-8657-a5911fbe636f",
+   "ded4e33e-9e23-4c7f-9523-9821c3cae044"
+  ]
+ },
+ "mobile-app-development-cost-india": {
+  "id": "c1b793e5-5358-4885-bec5-ba5ea35604df",
+  "title": "Close-up of a person taking a photo of a blooming cherry blossom tree with a smartphone. The screen of the phone displays the same vibrant pink blossoms that are visible in the background. The scene is bright and sunny, highlighting the beauty of the flowers and the fresh green leaves.",
+  "creator": "kanchanchauhan1984",
+  "creator_url": "https://wordpress.org/photos/author/kanchanchauhan1984/",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/7136654270/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution_required": false,
+  "query": "smartphone screen",
+  "rejected": [
+   "4cbf5e9f-0b39-402c-a8d3-20e50b41b503",
+   "e256cd04-897c-43d0-baaa-0d26de8d5ce8"
+  ]
+ },
+ "own-website-vs-marketplace": {
+  "id": "abf11de1-3528-4917-8051-98a321e8439d",
+  "title": "blomming-blog-ecommerce",
+  "creator": "#italybest",
+  "creator_url": "https://www.flickr.com/photos/76977116@N08",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/76977116@N08/6933724782",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "attribution_required": true,
+  "query": "ecommerce",
+  "rejected": []
+ },
+ "pathology-lab-software-features": {
+  "id": "ef508b80-d1bd-447b-a474-862391ddd812",
+  "title": "Test tubes",
+  "creator": "jepoirrier",
+  "creator_url": "https://www.flickr.com/photos/57519914@N00",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/57519914@N00/310155894",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "attribution_required": true,
+  "query": "lab test tubes",
+  "rejected": [
+   "b0d02f27-cbf3-4c65-9681-a1ed2935e51a",
+   "ecb32dd9-e05a-4ebf-8696-1b6aaba8c84c"
+  ]
+ },
+ "pharmacy-expiry-management": {
+  "id": "2bb1cd1d-b3cb-45f2-a2f2-f032b47273c5",
+  "title": "Extra Strength Tylenol Pill Bottle",
+  "creator": "Au Kirk",
+  "creator_url": "https://www.flickr.com/photos/64441474@N06",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/64441474@N06/8422844130",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "attribution_required": true,
+  "query": "pills bottle",
+  "rejected": [
+   "7b82f8e5-aeb6-439b-ac7f-d6b25fb626f0",
+   "f082e089-cad6-4b01-9fe3-d3c27efc079c"
+  ]
+ },
+ "quotation-software-with-payment-link": {
+  "id": "0c3e7c60-4136-4941-8306-d9301553b51e",
+  "title": "29-07-2013 iPad Stands for CiB - Payment terminal ready.",
+  "creator": "Swipespot",
+  "creator_url": "https://www.flickr.com/photos/63633337@N06",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/63633337@N06/9394842822",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "attribution_required": true,
+  "query": "payment terminal",
+  "rejected": [
+   "648c1174-7992-4fa7-8dd0-ab791daa41ae",
+   "64a5277d-f32d-4658-bb37-4b53eaafd431",
+   "7e0f6a45-6f8b-4aaf-b546-80c6cd801ad9"
+  ]
+ },
+ "reduce-lab-report-turnaround-time": {
+  "id": "9a9dfb1e-fd11-4e0b-ab03-cd088028c8a6",
+  "title": "Army scientists energize battery research",
+  "creator": "U.S. Army Combat Capabilities Development Command",
+  "creator_url": "https://www.flickr.com/photos/34402227@N03",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/34402227@N03/7336892606",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "attribution_required": true,
+  "query": "laboratory scientist",
+  "rejected": []
+ },
+ "reduce-opd-waiting-time": {
+  "id": "791869ca-8ef1-44ce-b648-873ef3315b5a",
+  "title": "Hospital waiting room",
+  "creator": "Gareth.D.Jones",
+  "creator_url": "https://www.flickr.com/photos/54517346@N06",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/54517346@N06/5064296031",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "attribution_required": true,
+  "query": "hospital waiting room",
+  "rejected": [
+   "c336afb0-b740-40ee-859d-9147a0fced88"
+  ]
+ },
+ "round-robin-lead-assignment": {
+  "id": "8b0f7bf2-aeec-4879-9f7b-ed850d782a90",
+  "title": "Office Desk with code in Rajshahi, Bangladesh",
+  "creator": "Md. Ibrahim Khalil",
+  "creator_url": "http://ibrahimlive.xyz/",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/20664bd4ff/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution_required": false,
+  "query": "office desks",
+  "rejected": [
+   "630d68ae-d713-4f43-b9ab-e40f7f6c2dc9",
+   "aad99c76-c5a9-4b76-af2b-fd57219b505b"
+  ]
+ },
+ "sales-lead-follow-up-system": {
+  "id": "2d4fae96-02b2-4500-8583-e751b108538a",
+  "title": "A vertical white board displaying the months of the year translated into local Eastern Uganda dialects. The board sits on a concrete windowsill next to small clay sculptures and a window covered in translucent plastic.",
+  "creator": "Mohammed Kateregga",
+  "creator_url": "http://xerusmediagroup.com",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/45569c9919/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution_required": false,
+  "query": "calendar",
+  "rejected": [
+   "8b68fc06-7266-41b9-aa9a-07f2e1f32214",
+   "c59c164d-e669-4c6d-8be8-183db9ded376"
+  ]
+ },
+ "seo-for-small-business-website": {
+  "id": "e1e12a84-a47d-4946-8611-8fd583f980d9",
+  "title": "Google Analytics on Computer Screen",
+  "creator": "bluefountainmedia",
+  "creator_url": "https://www.flickr.com/photos/32110556@N03",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/32110556@N03/8191245592",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "attribution_required": true,
+  "query": "laptop analytics",
+  "rejected": [
+   "5d61e81c-6fae-44d1-a309-f4d5c3e48153",
+   "ecb60672-baa2-4a2c-8842-bd5391fda159"
+  ]
+ },
+ "ssl-certificate-expired": {
+  "id": "37d6278a-03fe-4990-8880-c9c413686539",
+  "title": "cyclone-fence-in-shallow-photography-951408",
+  "creator": "topten5",
+  "creator_url": "https://www.flickr.com/photos/185174148@N07",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/185174148@N07/49568734842",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "attribution_required": true,
+  "query": "https padlock",
+  "rejected": [
+   "628c08c0-1b24-4469-9c92-63ed8f4c75a8"
+  ]
+ },
+ "stock-audit-retail-shop": {
+  "id": "19835246-1889-4d87-b7df-e1eca0f89b9c",
+  "title": "Clipboard and Pens",
+  "creator": "robnguyen01",
+  "creator_url": "https://www.flickr.com/photos/46651916@N00",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/46651916@N00/4825313399",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "attribution_required": true,
+  "query": "clipboard",
+  "rejected": [
+   "0c67ff07-1bb6-484f-a1d3-2fb7140f68c2",
+   "488a02ed-800b-4aa3-a10d-271ad79caa7d"
+  ]
+ },
+ "tally-integration-custom-software": {
+  "id": "5b688295-b06e-4736-8ec2-2d6fac238bd9",
+  "title": "Accounting",
+  "creator": "401(K) 2013",
+  "creator_url": "https://www.flickr.com/photos/68751915@N05",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/68751915@N05/6757849129",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "attribution_required": true,
+  "query": "accounting",
+  "rejected": []
+ },
+ "track-customer-outstanding-payments": {
+  "id": "d46644d1-0c14-4ad3-9f10-6e42d76efd6b",
+  "title": "Close-up of the receipts spooling out",
+  "creator": "ben_osteen",
+  "creator_url": "https://www.flickr.com/photos/23269701@N02",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/23269701@N02/4391281523",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "attribution_required": true,
+  "query": "receipts",
+  "rejected": [
+   "07f7a0c7-1429-4004-993f-61fb068df6e0",
+   "311e9f20-b6a1-471b-8b0e-9d10f08fc921",
+   "74dd732d-9220-49a7-b02c-d1ca420f3656",
+   "ead4eb5e-92b2-4b68-96f8-62301af94250"
+  ]
+ },
+ "website-backup-strategy": {
+  "id": "b6643c0d-252f-461a-976a-c0327bd6e3e8",
+  "title": "Hard disk laser scanner closeup",
+  "creator": "scanlime",
+  "creator_url": "https://www.flickr.com/photos/22238428@N05",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/22238428@N05/2932267038",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "attribution_required": true,
+  "query": "hard disk",
+  "rejected": [
+   "244a073c-9bf4-41ca-9c0b-38e4fcd4b7bc"
+  ]
+ },
+ "website-maintenance-checklist": {
+  "id": "10476181-566b-4439-a28d-8c77a43583cd",
+  "title": "checklist",
+  "creator": "Alan Cleaver",
+  "creator_url": "https://www.flickr.com/photos/11121568@N06",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/11121568@N06/4439276478",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "attribution_required": true,
+  "query": "checklist",
+  "rejected": []
+ },
+ "what-is-crm": {
+  "id": "997ea220-174f-4758-ad28-28450909d414",
+  "title": "140527_Laptop_1",
+  "creator": "Tauralbus",
+  "creator_url": "https://www.flickr.com/photos/25507134@N00",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/25507134@N00/14934460071",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "attribution_required": true,
+  "query": "business laptop",
+  "rejected": [
+   "194173d9-c192-4c74-83f6-39b8070da2e6",
+   "9380171a-844f-42e6-84ce-cd1633cfe07a",
+   "ca83abed-f752-47c9-bf31-19df7539f70f"
+  ]
+ },
+ "what-is-software-amc": {
+  "id": "cebf9424-f3bf-466f-a626-3abc66ae0ac3",
+  "title": "Computer Repair",
+  "creator": "Sean MacEntee",
+  "creator_url": "https://www.flickr.com/photos/18090920@N07",
+  "source": "flickr",
+  "landing_url": "https://www.flickr.com/photos/18090920@N07/6500625219",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "attribution_required": true,
+  "query": "computer repair",
+  "rejected": [
+   "4ec7f600-44ef-4650-bf2b-92b7c5a294b8",
+   "e1ccce5b-6541-482e-9f61-2d8b05a2a920"
+  ]
+ },
+ "whatsapp-crm": {
+  "id": "698a3768-b24d-4fd4-a4d5-219eef482122",
+  "title": "A close-up view of a person’s hands holding a black smartphone. The screen displays a clear photo of the white, rectangular Maya Devi Temple building and its distinct geometric reflection mirrored in a still pond.",
+  "creator": "Sakin Shrestha",
+  "creator_url": "https://sakinshrestha.com",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/2086a2ac94/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution_required": false,
+  "query": "smartphone",
+  "rejected": []
+ },
+ "whatsapp-marketing-crm": {
+  "id": "48a68180-b1ad-4f10-a5f5-314183343a62",
+  "title": "House Phone",
+  "creator": "Topher",
+  "creator_url": "https://topher.how",
+  "source": "wordpress",
+  "landing_url": "https://wordpress.org/photos/photo/28062ed5e6/",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution_required": false,
+  "query": "phone",
+  "rejected": []
+ }
+}

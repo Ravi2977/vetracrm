@@ -1,0 +1,51 @@
+<!--
+{
+  "title": "Integrating Custom Software with Tally: Options Explained",
+  "description": "How custom software, CRM or ERP can integrate with Tally: what data to sync, common integration approaches, one-way vs two-way sync and best practices.",
+  "h1": "Integrating custom software with Tally: options explained",
+  "dek": "Most Indian businesses keep accounts in Tally. Connecting your operations software to it removes double entry and month-end mismatches.",
+  "category": "custom-software",
+  "date": "2026-11-22",
+  "keywords": "Tally integration, Tally ERP integration, sync software with Tally",
+  "faqs": [
+    ["Can invoices from my software go into Tally automatically?", "Yes. Sales invoices, purchases, receipts and ledgers can be pushed from your software into Tally through an integration, depending on your Tally setup."],
+    ["Is two-way sync with Tally necessary?", "Not always. Many businesses only push transactions into Tally. Two-way sync is useful when balances or payments recorded in Tally need to show in your operations software."]
+  ]
+}
+-->
+<p>Tally is the accounting backbone for a large share of Indian businesses. Operations, however, often run elsewhere: in a CRM, ERP, billing system or custom software. Without integration, accountants re-enter every invoice.</p>
+
+<h2>What data is usually synced</h2>
+<ul>
+  <li><strong>Masters:</strong> customer and supplier ledgers, stock items, tax details</li>
+  <li><strong>Sales:</strong> invoices with GST details</li>
+  <li><strong>Purchases:</strong> purchase bills</li>
+  <li><strong>Receipts and payments</strong></li>
+  <li><strong>Credit and debit notes</strong></li>
+</ul>
+
+<h2>Integration approaches</h2>
+<h3>Direct integration</h3>
+<p>Tally provides interfaces that external software can use to read and write data, typically on a machine where Tally is running and accessible. This allows near real-time sync when configured properly.</p>
+<h3>File-based import</h3>
+<p>Your software exports vouchers in a Tally-compatible format that the accountant imports on a schedule. Simpler, but less automatic.</p>
+<h3>Middleware or connector</h3>
+<p>A small connector application runs alongside Tally and syncs data with cloud software, useful when your main system is online and Tally is on an office PC.</p>
+
+<h2>One-way or two-way?</h2>
+<ul>
+  <li><strong>One-way (software → Tally):</strong> most common; operations create transactions, Tally records them.</li>
+  <li><strong>Two-way:</strong> useful when outstanding balances or payments from Tally should appear in your software.</li>
+</ul>
+
+<h2>Best practices</h2>
+<ul>
+  <li>Agree on ledger names, item names and tax mappings first</li>
+  <li>Use unique references so the same invoice is never posted twice</li>
+  <li>Log every sync and show errors clearly</li>
+  <li>Test with a copy of your Tally company before going live</li>
+</ul>
+
+<div class="article-callout"><b>Biggest source of errors</b><p>Mismatched masters, such as a customer named slightly differently in each system. Clean and map masters before automating transactions.</p></div>
+
+<p>Our <a href="/custom-software-development/">custom software team</a> builds Tally integrations for CRMs, ERPs and billing systems. Related: <a href="/blog/erp-for-small-business-india.html">ERP for small businesses</a>.</p>

@@ -1,0 +1,47 @@
+<!--
+{
+  "title": "Website and Software Backup Strategy: The 3-2-1 Rule",
+  "description": "How to back up your website, database and business software: the 3-2-1 rule, frequency, off-site copies, retention, encryption and testing restores.",
+  "h1": "Website and software backup strategy: the 3-2-1 rule",
+  "dek": "Backups are boring until the day you need one. Then they are the only thing that matters.",
+  "category": "maintenance",
+  "date": "2026-11-22",
+  "keywords": "website backup, database backup strategy, 3-2-1 backup rule",
+  "faqs": [
+    ["How often should I back up my website?", "It depends on how often data changes. A brochure site may need weekly backups; an e-commerce site or business software with daily transactions needs at least daily database backups."],
+    ["Are my hosting provider's backups enough?", "They help, but keep at least one independent copy elsewhere, because a hosting account problem can affect both the site and its backups."]
+  ]
+}
+-->
+<p>Servers fail, updates go wrong, people delete things by mistake, and ransomware happens. A good backup strategy turns a disaster into a short inconvenience.</p>
+
+<h2>The 3-2-1 rule</h2>
+<ul>
+  <li><strong>3</strong> copies of your data (the live one plus two backups)</li>
+  <li><strong>2</strong> different storage types or providers</li>
+  <li><strong>1</strong> copy off-site, away from your main server or office</li>
+</ul>
+
+<h2>What to back up</h2>
+<ul>
+  <li><strong>Database:</strong> orders, customers, invoices, content</li>
+  <li><strong>Files:</strong> uploads, images, documents</li>
+  <li><strong>Code and configuration:</strong> ideally in version control</li>
+  <li><strong>Desktop software data:</strong> local databases on office PCs (see <a href="/blog/offline-first-software.html">offline-first software</a>)</li>
+</ul>
+
+<h2>How often</h2>
+<p>Match frequency to how much data you can afford to lose. If losing a day of orders is unacceptable, back up the database more often than daily.</p>
+
+<h2>Retention</h2>
+<p>Keep several restore points, for example daily for two weeks, weekly for two months and monthly for a year, so you can go back before a problem started.</p>
+
+<h2>Security</h2>
+<p>Encrypt backups, restrict who can access them, and keep at least one copy that cannot be modified or deleted from the live server.</p>
+
+<h2>Test restores</h2>
+<p>A backup you have never restored is a hope, not a backup. Restore to a test environment every quarter and confirm the site or software works.</p>
+
+<div class="article-callout"><b>Office PCs count too</b><p>Billing and accounting data often lives on one office computer. Schedule automatic backups to the cloud, not just a pen drive in the same drawer.</p></div>
+
+<p>Our <a href="/maintenance-support/">support plans</a> include scheduled, tested backups. Related: <a href="/blog/website-maintenance-checklist.html">maintenance checklist</a>.</p>
