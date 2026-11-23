@@ -322,7 +322,7 @@ p { margin: 0; }
 .form-grid label { display: block; color: #334155; font-size: 14px; font-weight: 700; }
 .form-grid em { color: var(--orange-600); font-style: normal; }
 .optional { margin-left: 4px; color: #94a3b8; font-size: 12.5px; font-weight: 500; }
-.form-grid input, .form-grid select, .form-grid textarea { display: block; width: 100%; min-height: 46px; margin-top: 6px; padding: 11px 13px; border: 1px solid #d5dde8; border-radius: 10px; background: #fff; color: var(--ink); font-size: 16px; outline: none; transition: border-color .15s, box-shadow .15s; }
+.form-grid input, .form-grid select, .form-grid textarea { display: block; width: 100%; min-height: 46px; margin-top: 6px; padding: 11px 13px; border: 1px solid #d5dde8; border-radius: 10px; background: #fff; color: var(--ink); font-size: 16px; font-weight: 500; outline: none; transition: border-color .15s, box-shadow .15s; }
 .form-grid input::placeholder, .form-grid textarea::placeholder { color: #94a3b8; }
 .form-grid select:invalid { color: #94a3b8; }
 .form-grid input:focus, .form-grid select:focus, .form-grid textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 4px rgba(37,99,235,.15); }
@@ -337,18 +337,31 @@ p { margin: 0; }
 .form-status.is-error { background: #fef2f2; color: #b91c1c; }
 .form-status.is-success { background: #f0fdf4; color: #15803d; }
 
-/* Offer popup (script.js isko banata hai) */
-.offer-dialog { width: min(680px, calc(100vw - 32px)); max-width: none; max-height: calc(100dvh - 32px); overflow-y: auto; overscroll-behavior: contain; margin: auto; padding: 34px; border: 0; border-radius: 22px; background: #fff; color: var(--ink); box-shadow: 0 40px 100px rgba(2,8,23,.4); }
-.offer-dialog::backdrop { background: rgba(10,15,31,.7); backdrop-filter: blur(4px); }
-.offer-dialog[open] { animation: pop .35s cubic-bezier(.2,.8,.2,1) both; }
-@keyframes pop { from { opacity: 0; transform: translateY(12px) scale(.98); } }
-.offer-close { position: absolute; top: 14px; right: 14px; width: 38px; height: 38px; border: 1px solid var(--line); border-radius: 50%; background: var(--paper); color: var(--body); font-size: 22px; line-height: 1; cursor: pointer; }
-.offer-kicker { display: inline-flex; align-items: center; gap: 8px; padding: 6px 8px 6px 12px; border-radius: 999px; background: #fff7ed; border: 1px solid #fed7aa; color: #9a3412; font-size: 12.5px; font-weight: 800; letter-spacing: .06em; }
-.offer-kicker > span { color: var(--orange); }
-.offer-kicker > b { padding: 3px 9px; border-radius: 999px; background: var(--orange-600); color: #fff; }
-.offer-dialog h2 { margin: 12px 0 10px; font-size: clamp(26px, 5vw, 34px); font-weight: 800; }
-.offer-intro { margin-bottom: 20px !important; color: var(--body); font-size: 15.5px; }
-.offer-form { padding: 22px; border: 1px solid #bfdbfe; box-shadow: none; background: linear-gradient(135deg, #fff 65%, var(--sky)); }
+/* Lead popup (script.js banata hai): left = heading + benefits + image, right = form.
+   <dialog> top layer me khulta hai => page ka layout bilkul nahi hilta (CLS 0). */
+.lead-pop { width: min(900px, calc(100vw - 32px)); max-width: none; max-height: calc(100dvh - 32px); margin: auto; padding: 0; border: 0; border-radius: 24px; background: #fff; color: var(--ink); box-shadow: 0 40px 100px rgba(2,8,23,.45); overflow: auto; overscroll-behavior: contain; }
+.lead-pop[open] { display: grid; grid-template-columns: 1fr 1.08fr; animation: pop .35s cubic-bezier(.2,.8,.2,1) both; }
+.lead-pop::backdrop { background: rgba(10,15,31,.72); backdrop-filter: blur(4px); }
+@keyframes pop { from { opacity: 0; transform: translateY(14px) scale(.98); } }
+@keyframes sheet { from { transform: translateY(100%); } }
+.offer-close { position: absolute; top: 14px; right: 14px; z-index: 3; width: 38px; height: 38px; border: 1px solid var(--line); border-radius: 50%; background: #fff; color: var(--body); font-size: 22px; line-height: 1; cursor: pointer; }
+.offer-close:hover { color: var(--ink); border-color: #cbd5e1; }
+.lp-side { display: flex; flex-direction: column; gap: 14px; padding: 36px 32px 0; overflow: hidden; color: #cbd5e1; background: radial-gradient(420px 260px at 100% 0%, rgba(249,115,22,.32), transparent 60%), radial-gradient(460px 320px at 0% 100%, rgba(37,99,235,.55), transparent 60%), var(--ink); }
+.lp-badge { align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; padding: 5px 12px 5px 5px; border-radius: 999px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); color: #fed7aa; font-size: 13px; font-weight: 700; }
+.lp-badge b { padding: 3px 9px; border-radius: 999px; background: var(--orange-600); color: #fff; font-size: 12px; }
+.lp-side h2 { color: #fff; font-size: clamp(26px, 3vw, 32px); font-weight: 800; line-height: 1.15; }
+.lp-side > p { font-size: 15.5px; }
+.lp-points { display: grid; gap: 9px; margin: 2px 0 6px; padding: 0; list-style: none; }
+.lp-points li { display: flex; align-items: center; gap: 10px; color: #e2e8f0; font-size: 15px; font-weight: 600; }
+.lp-points li::before { content: "✓"; display: grid; place-items: center; flex: none; width: 22px; height: 22px; border-radius: 50%; background: rgba(34,197,94,.18); color: #4ade80; font-size: 12px; font-weight: 800; }
+.lp-shot { position: relative; margin: auto -6px 0 0; border: 1px solid rgba(255,255,255,.14); border-bottom: 0; border-radius: 14px 14px 0 0; overflow: hidden; box-shadow: 0 -10px 40px rgba(0,0,0,.35); transform: translateX(14px); }
+.lp-shot img { width: 100%; height: auto; aspect-ratio: 1440 / 810; }
+.lp-form.contact-form { padding: 34px 32px 26px; border-radius: 0; box-shadow: none; }
+.lp-form .form-heading { padding-right: 40px; }
+.lp-form .form-grid { gap: 12px; }
+.lp-submit { width: 100%; margin-top: 18px; min-height: 52px; font-size: 16px; }
+.lp-legal { margin-top: 10px; color: var(--muted); font-size: 12.5px; text-align: center; }
+.lp-legal a { color: var(--blue); text-decoration: underline; }
 
 /* ---------- Footer ---------- */
 .footer { padding: 72px 0 32px; background: #060a16; color: #94a3b8; font-size: 15px; }
@@ -435,8 +448,14 @@ p { margin: 0; }
   .form-bottom .btn { width: 100%; }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
   .footer-about { grid-column: 1 / -1; }
-  .offer-dialog { width: calc(100vw - 20px); padding: 44px 16px 16px; }
-  .offer-form { padding: 14px; }
+  .lead-pop { width: 100%; max-height: 92dvh; margin: auto 0 0; border-radius: 22px 22px 0 0; }
+  .lead-pop[open] { grid-template-columns: 1fr; animation: sheet .35s cubic-bezier(.2,.8,.2,1) both; }
+  .lp-side { gap: 8px; padding: 22px 60px 18px 20px; }
+  .lp-side > p, .lp-points, .lp-shot { display: none; }
+  .lp-side h2 { font-size: 23px; }
+  .lp-form.contact-form { padding: 18px 20px 22px; }
+  .lp-form .form-heading { display: none; }
+  .lp-form .form-grid { grid-template-columns: 1fr; gap: 10px; }
   .wa-float span { display: none; }
   .wa-float { padding: 14px; }
 }
@@ -664,6 +683,6 @@ a.card:hover { transform: translateY(-3px); border-color: #93c5fd; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .float, .offer-dialog[open] { animation: none; }
+  .float, .lead-pop[open] { animation: none; }
   .js-reveal .reveal-on { opacity: 1; transform: none; }
 }

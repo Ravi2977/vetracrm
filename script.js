@@ -26,28 +26,55 @@ function createSourceLeadId() {
   const uniquePart = globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(36).slice(2, 12)}`;
   return `vetracrm-website-${uniquePart}`;
 }
+/* ---------------------------------------------------------------------------
+   Lead popup (har page par landing ke time). Left: heading + benefits + product image,
+   right: form. Submit wahi same CRM + Google Sheet flow se hota hai (neeche).
+   OFFER_END ke baad offer wali lines apne aap hatt jaati hain, popup "free demo" ban jaata hai.
+--------------------------------------------------------------------------- */
+const OFFER_END = Date.parse('2026-12-26T00:00:00+05:30');
+const offerActive = Date.now() < OFFER_END;
+const OFFER_INTEREST = 'Christmas offer (20% off subscription + setup)';
+const pageForm = document.querySelector('#contact-form');
+const pageInterest = pageForm?.querySelector('[name="interest"]');
+const interestOptions = pageInterest
+  ? [...pageInterest.options].filter((o) => o.value !== '').map((o) => o.text)
+  : [OFFER_INTEREST, 'Cloud CRM: Starter plan', 'Cloud CRM: Growth plan', 'Cloud CRM: Pro plan', 'Self-hosted CRM (on my own server)', 'Not sure yet, help me choose'];
+// Product/service page par wahi interest pehle se select (warna offer ya "help me choose")
+const pageDefault = pageInterest?.querySelector('option[selected]:not([value=""])')?.text;
+const popupDefault = pageDefault || (offerActive ? OFFER_INTEREST : 'Not sure yet, help me choose');
+const escapeHtml = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
 const offerDialog = document.createElement('dialog');
-offerDialog.className = 'offer-dialog';
-offerDialog.setAttribute('aria-labelledby', 'offer-title');
+offerDialog.className = 'lead-pop';
+offerDialog.setAttribute('aria-labelledby', 'lead-pop-title');
 offerDialog.innerHTML = `
-  <button class="offer-close" type="button" aria-label="Close offer form">×</button>
-  <div class="offer-kicker"><span aria-hidden="true">✦</span> CHRISTMAS OFFER <b>20% OFF</b></div>
-  <h2 id="offer-title">Get your Vetra CRM offer</h2>
-  <p class="offer-intro">Get 20% off Vetra Cloud plans and one-time setup, valid till 25 December 2026. Plans start at ₹1,599/month with the offer. Share your details and our team will send your discounted quote.</p>
-  <form class="contact-form offer-form" name="offer-enquiry" method="POST">
-    <p class="hidden-field"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
-    <div class="form-grid">
-      <label>Full name <em>*</em><input required name="name" autocomplete="name" placeholder="Your name"></label>
-      <label>Business name <em>*</em><input required name="business" autocomplete="organization" placeholder="Your business"></label>
-      <label>Work email <em>*</em><input required type="email" name="email" autocomplete="email" placeholder="you@company.com"></label>
-      <label>Mobile number <span class="optional">Optional</span><input type="tel" name="phone" autocomplete="tel" placeholder="+91 98765 43210"></label>
-      <label>City <span class="optional">Optional</span><input name="city" autocomplete="address-level2" placeholder="Your city"></label>
-      <label>State / region <span class="optional">Optional</span><input name="state" autocomplete="address-level1" placeholder="Your state"></label>
-      <label>Business type <em>*</em><select required name="business_type"><option value="" disabled selected>Select your business type</option><option>IndiaMART seller</option><option>Manufacturer or supplier</option><option>Wholesaler or distributor</option><option>B2B trading or export</option><option>Professional or service business</option><option>Consulting or agency</option><option>E-commerce</option><option>Retail or trading</option><option>Other</option></select></label>
-      <label>Interested in <select name="interest"><option selected>Christmas offer (20% off subscription + setup)</option><option>Cloud CRM: Starter plan</option><option>Cloud CRM: Growth plan</option><option>Cloud CRM: Pro plan</option><option>Self-hosted CRM (on my own server)</option><option>Not sure yet, help me choose</option></select></label>
-      <label class="form-full">What would you like help with? <span class="optional">Optional</span><textarea name="message" rows="2" placeholder="Tell us what your team needs…"></textarea></label>
+  <button class="offer-close" type="button" aria-label="Close">×</button>
+  <div class="lp-side">
+    ${offerActive ? '<span class="lp-badge"><b>20% OFF</b> Christmas offer · till 25 Dec</span>' : '<span class="lp-badge"><b>FREE</b> Demo · no obligation</span>'}
+    <h2 id="lead-pop-title">${offerActive ? 'Get 20% off + a free demo' : 'See Vetra in a free demo'}</h2>
+    <p>Software that runs your business, from first lead to final bill. Tell us what you need and we'll call you back.</p>
+    <ul class="lp-points">
+      <li>Free demo with your kind of data</li>
+      <li>Clear written quote, no hidden costs</li>
+      <li>Setup, training &amp; support included</li>
+    </ul>
+    <div class="lp-shot" aria-hidden="true">
+      <img src="/assets/media/product-screen-01.jpg" alt="" width="1440" height="810" loading="lazy" decoding="async">
+      <span class="screen-redaction screen-redaction-profile"></span><span class="screen-redaction screen-redaction-greeting"></span>
     </div>
-    <div class="form-bottom"><p>By submitting, you agree we may contact you about Vetra CRM. See our <a href="/privacy.html">privacy notice</a>.</p><button class="btn btn-primary" type="submit">Get 20% offer <span>↗</span></button></div>
+  </div>
+  <form class="contact-form lp-form" name="popup-enquiry" method="POST" data-lead-source="Popup form">
+    <p class="hidden-field"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+    <div class="form-heading"><h3>Get a call back</h3><p>Takes 20 seconds. Fields marked * are required.</p></div>
+    <div class="form-grid">
+      <label class="form-full">Full name <em>*</em><input required name="name" autocomplete="name" placeholder="Your name"></label>
+      <label class="form-full">Mobile / WhatsApp <em>*</em><input required type="tel" name="phone" autocomplete="tel" inputmode="tel" pattern="[0-9+\\s\\-]{10,15}" title="Enter a valid mobile number, 10 to 15 digits" placeholder="+91 98765 43210"></label>
+      <label class="form-full">Work email <em>*</em><input required type="email" name="email" autocomplete="email" placeholder="you@company.com"></label>
+      <label>Business name <em>*</em><input required name="business" autocomplete="organization" placeholder="Your business"></label>
+      <label>Interested in <select name="interest">${interestOptions.map((t) => `<option${t === popupDefault ? ' selected' : ''}>${escapeHtml(t)}</option>`).join('')}</select></label>
+    </div>
+    <button class="btn btn-primary lp-submit" type="submit">${offerActive ? 'Claim my 20% offer' : 'Book my free demo'}</button>
+    <p class="lp-legal">We'll only contact you about your enquiry. <a href="/privacy.html">Privacy notice</a>.</p>
     <p class="form-status" role="status" aria-live="polite"></p>
   </form>
 `;
@@ -77,9 +104,14 @@ contactForms.forEach((contactForm) => {
       : `${window.location.origin}${window.location.pathname}`;
     const businessType = String(formData.get('business_type') || '').trim();
     const customerMessage = String(formData.get('message') || '').trim();
+    const urlParams = new URLSearchParams(window.location.search);
+    const utm = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
+      .map((k) => (urlParams.get(k) ? `${k}=${urlParams.get(k)}` : '')).filter(Boolean).join(', ');
     const contextLines = [
       businessType ? `Business type: ${businessType}` : '',
+      `Lead form: ${contactForm.dataset.leadSource || 'Page form'}`,
       `Website page: ${pageUrl}`,
+      utm ? `Campaign: ${utm}` : '',
     ].filter(Boolean);
     const sourceLeadId = contactForm.dataset.sourceLeadId || createSourceLeadId();
     contactForm.dataset.sourceLeadId = sourceLeadId;
@@ -153,6 +185,7 @@ contactForms.forEach((contactForm) => {
       delete contactForm.dataset.sourceLeadId;
       contactStatus.textContent = 'Thank you. Your enquiry has been sent to the Vetra CRM team.';
       contactStatus.classList.add('is-success');
+      contactForm.dispatchEvent(new CustomEvent('vetra:lead', { bubbles: true }));
     } catch (error) {
       contactStatus.textContent = error instanceof TypeError
         ? 'We could not reach the Vetra CRM service. Please check your connection and try again.'
@@ -165,28 +198,64 @@ contactForms.forEach((contactForm) => {
   });
 });
 
-offerDialog.querySelector('.offer-close').addEventListener('click', () => offerDialog.close('dismiss'));
+/* ---------------------------------------------------------------------------
+   Popup kab dikhe:
+   - kisi bhi page par landing ke time (contact/thanks/privacy/404 chhod kar)
+   - desktop: ~1.5s baad, mobile: ~4s baad bottom sheet (Google ki mobile popup guideline ke liye)
+   - close kiya => 24 ghante nahi; form bhar diya => 30 din nahi
+   - ek tab-session me sirf ek baar
+   - ?popup=1 URL me ho to hamesha dikhe (testing ke liye)
+--------------------------------------------------------------------------- */
+const POPUP_KEY = 'vetraLeadPopup';
+const DAY = 24 * 60 * 60 * 1000;
+const store = {
+  get(k) { try { return JSON.parse(localStorage.getItem(k) || 'null'); } catch { return null; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* storage blocked */ } },
+  session(k, v) { try { if (v === undefined) return sessionStorage.getItem(k); sessionStorage.setItem(k, v); } catch { return null; } return null; },
+};
+const track = (name, params = {}) => { if (window.gtag) window.gtag('event', name, params); };
+
+function closePopup(reason) {
+  if (!offerDialog.open) return;
+  offerDialog.close(reason);
+}
+offerDialog.querySelector('.offer-close').addEventListener('click', () => closePopup('dismiss'));
 offerDialog.addEventListener('click', (event) => {
-  if (event.target === offerDialog) offerDialog.close('dismiss');
+  if (event.target === offerDialog) closePopup('dismiss');   // backdrop click
+});
+offerDialog.addEventListener('close', () => {
+  if (offerDialog.returnValue !== 'lead') {
+    store.set(POPUP_KEY, { until: Date.now() + DAY });
+    track('popup_close', { page: location.pathname });
+  }
+});
+document.addEventListener('vetra:lead', (event) => {
+  // Kisi bhi form se lead aayi => 30 din tak popup nahi
+  store.set(POPUP_KEY, { until: Date.now() + 30 * DAY, submitted: true });
+  if (event.target === offerDialog.querySelector('form')) {
+    track('generate_lead', { form: 'popup' });
+    setTimeout(() => closePopup('lead'), 2500);
+  }
 });
 
-// Show the offer once when a visitor first lands on the homepage in this tab session.
-const isLandingPage = window.location.pathname === '/' || window.location.pathname === '/index.html';
-const offerSeenKey = 'vetraOfferSeenThisSession';
-let offerSeenThisSession = false;
-try {
-  offerSeenThisSession = sessionStorage.getItem(offerSeenKey) === 'true';
-} catch {
-  // If storage is unavailable, still keep the popup limited to the homepage load.
-}
+(function maybeShowPopup() {
+  const path = location.pathname;
+  const excluded = ['/contact/', '/thanks.html', '/privacy.html', '/404.html'].includes(path)
+    || document.title.startsWith('Page not found');
+  const forced = new URLSearchParams(location.search).get('popup') === '1';
+  const saved = store.get(POPUP_KEY);
+  const snoozed = saved && saved.until > Date.now();
+  const shownThisSession = store.session(POPUP_KEY) === '1';
+  if (!forced && (excluded || snoozed || shownThisSession)) return;
 
-// Offer ends after 25 December 2026 (IST); after that the popup stops showing.
-const offerActive = Date.now() < Date.parse('2026-12-26T00:00:00+05:30');
-if (offerActive && isLandingPage && !offerSeenThisSession) {
-  offerDialog.showModal();
-  try {
-    sessionStorage.setItem(offerSeenKey, 'true');
-  } catch {
-    // The dialog will not be re-opened by page navigation handlers.
-  }
-}
+  const mobile = window.matchMedia('(max-width: 680px)').matches;
+  setTimeout(() => {
+    // User kisi aur form me type kar raha ho ya koi dialog khula ho to disturb mat karo
+    const active = document.activeElement;
+    if (!forced && active && active.closest && active.closest('form')) return;
+    if (document.querySelector('dialog[open]')) return;
+    offerDialog.showModal();
+    store.session(POPUP_KEY, '1');
+    track('popup_view', { page: path, device: mobile ? 'mobile' : 'desktop' });
+  }, mobile ? 4000 : 1500);
+})();
