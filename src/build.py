@@ -33,7 +33,7 @@ GA_ID = "G-WYN8PXTC22"
 WHATSAPP_NUMBER = "918604275934"
 WA_TEXT = "Hi, I'd like a demo of Vetra CRM."
 OFFER_END = "2026-12-26T00:00:00+05:30"   # is time ke baad offer bar/chip/prices apne aap chhup jaate hain
-CSS_VERSION = "5"                          # CSS badlo to ise badhao (browser cache tod deta hai)
+CSS_VERSION = "7"                          # CSS badlo to ise badhao (browser cache tod deta hai)
 SOCIAL = [
     ("Facebook", "https://www.facebook.com/people/Vetra-Crm/61596019807651/", '<path d="M13.4 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.5 1.6-1.5h1.7V3.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.2v3.2H10V21h3.4Z"/>'),
     ("Instagram", "https://www.instagram.com/vetracrm/", '<rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.7" cy="6.6" r="1.2"/>'),
@@ -274,7 +274,7 @@ def render(meta, body, contact=True):
     if contact and 'id="contact"' not in body:
         body += "\n" + contact_section(meta.get("interest"), meta.get("contact_title"), meta.get("contact_lede"))
     out = (head(meta) + "\n<body>\n" + header(meta["url"]) + '\n<main id="main">\n' + body + "\n</main>\n"
-           + footer() + '\n<script src="/site.js" defer></script>\n<script src="/script.js" defer></script>\n</body>\n</html>\n')
+           + footer() + f'\n<script src="/site.js?v={CSS_VERSION}" defer></script>\n<script src="/script.js?v={CSS_VERSION}" defer></script>\n</body>\n</html>\n')
     if 'id="contact"' not in body:
         out = out.replace('href="#contact"', 'href="/contact/"')
     return out
